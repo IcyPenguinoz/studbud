@@ -1,25 +1,108 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
-nav {
+.logo-text {
+  text-align: center;
+  color: white;
+  margin-top: 1em;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.Home-Title {
+  font-size: 50px;
+}
+.Home-Quote {
+  font-size: 35px;
+  color: #4CB944;
+  position: relative;
+}
+/* .Home-Quote:before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -2;
+}
+
+.Home-Quote:after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -2;
+}
+
+*/
+.Home-Quote span {
+  background-color: #ffc8c8;
+}
+.top-nav {
+  width: 150px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  background-color: #123;
+}
+.top-nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.top-nav .nav-links .nav-item a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 4em 0;
+  text-align: center;
+}
+.top-nav .nav-links .nav-item a:hover {
+  color: #abc;
+}
+.top-nav .nav-links .nav-item a.active {
+  font-weight: bold;
+}
+.sub-nav {
   width: 100%;
   background-color: #123;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav .nav-links {
+.sub-nav .nav-links {
   list-style: none;
   display: flex;
 }
-nav .nav-links .nav-item a {
+.sub-nav .nav-links .nav-item a {
   display: inline-block;
   text-decoration: none;
   color: white;
   padding: 1em 2em;
 }
-nav .nav-links .nav-item a:hover {
+.sub-nav .nav-links .nav-item a:hover {
   color: #abc;
 }
-nav .nav-links .nav-item a.active {
+.sub-nav .nav-links .nav-item a.active {
   font-weight: bold;
 }
 * {
@@ -29,6 +112,7 @@ nav .nav-links .nav-item a.active {
 .app-container {
   background-color: #ffc8c8;
   font-family: "Poppins", sans-serif;
+  padding-left: 120px;
 }
 .page-container {
   margin: 4em;
