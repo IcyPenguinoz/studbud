@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+.app-container {
+  background-color: rgb(255, 200, 200);
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-container{
+  margin: 4em;
+
+  &#home{
+    text-align: center;
+  }
+
+  &:not(#home){
+    display: none;
+  }
+}
+
+
+

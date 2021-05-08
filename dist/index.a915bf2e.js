@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="/index.0c72b7db.css" rel="stylesheet" type="text/css">
-</head>
-<body class="app-container">
-
-    <nav class="top-nav"> 
-        <ul class="nav-links">
-            <li class="nav-item"> <a href="#home" class="active"> Home </a> </li>
-            <li class="nav-item"> <a href="#page1"> Page1 </a> </li>
-            <li class="nav-item"> <a href="#page2"> Page2 </a> </li>
-            <li class="nav-item"> <a href="#page3"> Page3 </a> </li>
-        </ul>
-    </nav>
-
-    <div id="home" class="page-container">
-        <h1> Hello World Wide Web!</h1>
-        <br>
-        <p> This time with <a href="https://expressjs.com/"> Express</a> + <a href="https://v2.parceljs.org/"> Parcel </a> + 
-        <a href="https://sass-lang.com/"> SASS (SCSS)</a>!</p>
-    </div>
-
-    <div id="page1" class="page-container">
-        <h1> Page 1</h1>
-    </div>
-
-    <div id="page2" class="page-container">
-        <h1> Page 2</h1>
-    </div>
-
-    <div id="page3" class="page-container">
-        <h1> Page 3</h1>
-    </div>
-
-
-    <script src="/index.a915bf2e.js">// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -180,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"3iCVZ":[function(require,module,exports) {
+})({"4de8m":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "e3c030227dba28f71a6e81e989b0df81";
+module.bundle.HMR_BUNDLE_ID = "70dca43e1ee77af44d4d7940a915bf2e";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -481,12 +441,91 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"5hoAP":[function(require,module,exports) {
+},{}],"4B4Nd":[function(require,module,exports) {
+var _componentsNavigation = require('./components/navigation');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
+const links = document.querySelectorAll('nav > ul > li > a');
+const pages = "";
+var nav = new _componentsNavigationDefault.default(links, pages);
+nav.getLinks();
+nav.links.forEach(function (link) {
+  link.addEventListener('click', function () {
+    let pageId = nav.getHash(link);
+    nav.setPage(pageId);
+  });
+});
 
-},{}]},["3iCVZ","5hoAP"], "5hoAP", "parcelRequirec526")
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2K1cj":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+class Navigation {
+  constructor(links, pages) {
+    this.links = links;
+    this.pages = pages;
+    this.currentPage = null;
+  }
+  getLinks() {
+    console.log(this.links);
+  }
+  setPage(pageId) {
+    this.currentPage = pageId;
+    console.log(this.currentPage);
+    this.links.forEach(link => {
+      link.classList.remove('active');
+      if (this.getHash(link) === pageId) {
+        link.classList.add('active');
+      }
+    });
+  }
+  getHash(link) {
+    return link.href.split("#")[1];
+  }
+}
+exports.default = Navigation;
 
-</script>
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+"use strict";
 
-</body>
+exports.interopDefault = function (a) {
+  return a && a.__esModule ? a : {
+    default: a
+  };
+};
 
-</html> 
+exports.defineInteropFlag = function (a) {
+  Object.defineProperty(a, '__esModule', {
+    value: true
+  });
+};
+
+exports.exportAll = function (source, dest) {
+  Object.keys(source).forEach(function (key) {
+    if (key === 'default' || key === '__esModule') {
+      return;
+    } // Skip duplicate re-exports when they have the same value.
+
+
+    if (key in dest && dest[key] === source[key]) {
+      return;
+    }
+
+    Object.defineProperty(dest, key, {
+      enumerable: true,
+      get: function () {
+        return source[key];
+      }
+    });
+  });
+  return dest;
+};
+
+exports.export = function (dest, destName, get) {
+  Object.defineProperty(dest, destName, {
+    enumerable: true,
+    get: get
+  });
+};
+},{}]},["4de8m","4B4Nd"], "4B4Nd", "parcelRequirec526")
+
+//# sourceMappingURL=index.a915bf2e.js.map

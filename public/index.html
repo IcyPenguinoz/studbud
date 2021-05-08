@@ -1,2 +1,46 @@
-<h1> Test Title</h1>
-<p> Test Paragraph </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "./scss/main.scss" rel = "stylesheet" type = "text/css">
+</head>
+<body class = "app-container">
+
+    <nav class = "top-nav"> 
+        <ul class = "nav-links">
+            <li class = "nav-item"> <a href = "#home" class = "active"> Home </a> </li>
+            <li class = "nav-item"> <a href = "#page1"> Page1 </a> </li>
+            <li class = "nav-item"> <a href = "#page2"> Page2 </a> </li>
+            <li class = "nav-item"> <a href = "#page3"> Page3 </a> </li>
+        </ul>
+    </nav>
+
+    <div id = "home" class = "page-container">
+        <h1> Hello World Wide Web!</h1>
+        <br>
+        <p> This time with <a href = "https://expressjs.com/"> Express</a> + <a href = "https://v2.parceljs.org/"> Parcel </a> + 
+        <a href = "https://sass-lang.com/"> SASS (SCSS)</a>!</p>
+    </div>
+
+    <div id = 'page1' class = "page-container">
+        <h1> Page 1</h1>
+    </div>
+
+    <div id = 'page2' class = "page-container">
+        <h1> Page 2</h1>
+    </div>
+
+    <div id = 'page3' class = "page-container">
+        <h1> Page 3</h1>
+    </div>
+
+
+    <script src = "scripts.js">
+    </script>
+
+</body>
+
+</html> 
