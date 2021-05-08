@@ -19,8 +19,15 @@ class Navigation{
                 link.classList.add('active');
             }
         })
+        
+        this.pages.forEach((page) => {
+            page.style.display = 'none';
+        })
+
+        document.getElementById(pageId).style.display = "block";
 
     }
+    
     getHash(link){
         return link.href.split("#")[1];
     }

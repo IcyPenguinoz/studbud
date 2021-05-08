@@ -445,14 +445,23 @@ id) /*: string*/
 var _componentsNavigation = require('./components/navigation');
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
-const links = document.querySelectorAll('nav > ul > li > a');
-const pages = "";
+const links = document.querySelectorAll('.top-nav > ul > li > a');
+const pages = document.querySelectorAll('.page-container');
 var nav = new _componentsNavigationDefault.default(links, pages);
 nav.getLinks();
 nav.links.forEach(function (link) {
   link.addEventListener('click', function () {
     let pageId = nav.getHash(link);
     nav.setPage(pageId);
+  });
+});
+const subLinks = document.querySelectorAll('.sub-nav > ul > li > a');
+const subPages = document.querySelectorAll('.sub-page-container');
+var subNav = new _componentsNavigationDefault.default(subLinks, subPages);
+subNav.links.forEach(link => {
+  link.addEventListener('click', function () {
+    let pageId = subNav.getHash(link);
+    subNav.setPage(pageId);
   });
 });
 
@@ -477,6 +486,10 @@ class Navigation {
         link.classList.add('active');
       }
     });
+    this.pages.forEach(page => {
+      page.style.display = 'none';
+    });
+    document.getElementById(pageId).style.display = "block";
   }
   getHash(link) {
     return link.href.split("#")[1];

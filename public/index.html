@@ -25,8 +25,26 @@
         <a href = "https://sass-lang.com/"> SASS (SCSS)</a>!</p>
     </div>
 
-    <div id = 'page1' class = "page-container">
-        <h1> Page 1</h1>
+    <div id ='page1' class = "page-container">
+        <h1>Page 1</h1>
+        <br>
+        <nav class = "sub-nav">
+            <ul class = "nav-links">
+                <li class = "nav-item"> <a href = "#page1-1" class = "active"> Page 1-1</a></li>
+                <li class = "nav-item"> <a href = "#page1-2"> Page 1-2</a></li>
+            </ul>
+        </nav>
+        
+        <br>
+
+        <div id = "page1-1" class = "sub-page-container"> 
+            <h2> Page 1 - 1</h2>
+        </div>
+
+        <div id = "page1-2" class = "sub-page-container" style = "display: none;"> 
+            <h2> Page 1 - 2</h2>
+        </div>
+
     </div>
 
     <div id = 'page2' class = "page-container">
