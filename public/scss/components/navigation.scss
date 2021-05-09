@@ -1,3 +1,13 @@
+.Home-Page-Container{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-45%) translateY(-55%);
+
+}
+
 .logo-text{
     text-align: center;
     color: white;
@@ -9,11 +19,11 @@
     background-color: #2EC4B6;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 60px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     border-radius: 50px;
     cursor: pointer;
@@ -22,8 +32,6 @@
 
 .Home-Title{
     font-size: 50px;
-
-
 }
 
 .Home-Quote{
@@ -61,7 +69,11 @@
 */
 
 .Home-Quote span{
-    background-color: rgb(255, 200, 200) ;
+    background-color: transparent;
+}
+
+.Home-Body-Text{
+    font-size: 18px;
 }
 
 .top-nav {
@@ -86,7 +98,7 @@
             text-align: center;
 
             &:hover {
-                background: red;
+                background: red;    
                 color: #fff;
 
 
@@ -100,6 +112,7 @@
     }
     
 }
+
 
 .tabs{
     width: 100%;
@@ -141,7 +154,23 @@
     
 }
 
+.fa-fw{
+    margin-right: 2px;
+}
 
 .sub-page-container{
     margin-left: 30px;
 }
+
+/*
+@media only screen and (max-width: 600px) {
+    .nav-item a{
+        display:none;
+    }
+
+    .fa-fw{
+        font-size: 3em;
+        text-align: center;
+    }
+}
+*/

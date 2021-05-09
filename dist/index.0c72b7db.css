@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
+.Home-Page-Container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-45%) translateY(-55%);
+}
 .logo-text {
   text-align: center;
   color: white;
@@ -9,11 +17,11 @@
   background-color: #2EC4B6;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 60px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   margin: 4px 2px;
   border-radius: 50px;
   cursor: pointer;
@@ -54,7 +62,10 @@
 
 */
 .Home-Quote span {
-  background-color: #ffc8c8;
+  background-color: transparent;
+}
+.Home-Body-Text {
+  font-size: 18px;
 }
 .top-nav {
   width: 150px;
@@ -118,15 +129,30 @@
 .sub-nav .nav-links .nav-item a.active {
   font-weight: bold;
 }
+.fa-fw {
+  margin-right: 2px;
+}
 .sub-page-container {
   margin-left: 30px;
 }
+/*
+@media only screen and (max-width: 600px) {
+    .nav-item a{
+        display:none;
+    }
+
+    .fa-fw{
+        font-size: 3em;
+        text-align: center;
+    }
+}
+*/
 * {
   margin: 0;
   padding: 0;
 }
 .app-container {
-  background-color: #ffc8c8;
+  background-image: url(Background.d653f4b0.png);
   font-family: "Poppins", sans-serif;
   padding-left: 120px;
 }
