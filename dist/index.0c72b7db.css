@@ -3,9 +3,10 @@
   text-align: center;
   color: white;
   margin-top: 1em;
+  padding-bottom: 0.6em;
 }
 .button {
-  background-color: #4CAF50;
+  background-color: #2EC4B6;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -14,16 +15,18 @@
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
+  font-weight: bold;
 }
 .Home-Title {
   font-size: 50px;
 }
 .Home-Quote {
   font-size: 35px;
-  color: #4CB944;
+  color: #004F2D;
   position: relative;
+  font-weight: bold;
 }
 /* .Home-Quote:before{
     content: "";
@@ -55,7 +58,7 @@
 }
 .top-nav {
   width: 150px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -73,17 +76,28 @@
   display: block;
   text-decoration: none;
   color: white;
-  padding: 4em 0;
+  padding: 3.2em 0;
   text-align: center;
 }
 .top-nav .nav-links .nav-item a:hover {
-  color: #abc;
+  background: red;
+  color: #fff;
 }
 .top-nav .nav-links .nav-item a.active {
   font-weight: bold;
 }
+.tabs {
+  width: 100%;
+  height: 60vh;
+  padding: 20px 30x;
+  background: #f9f9f9;
+  border-radius: 50px;
+}
 .sub-nav {
   width: 100%;
+  height: 120px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   background-color: #123;
   display: flex;
   justify-content: space-around;
@@ -94,7 +108,6 @@
   display: flex;
 }
 .sub-nav .nav-links .nav-item a {
-  display: inline-block;
   text-decoration: none;
   color: white;
   padding: 1em 2em;
@@ -104,6 +117,9 @@
 }
 .sub-nav .nav-links .nav-item a.active {
   font-weight: bold;
+}
+.sub-page-container {
+  margin-left: 30px;
 }
 * {
   margin: 0;

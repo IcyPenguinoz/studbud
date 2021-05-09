@@ -17,63 +17,94 @@
             <li class="nav-item"> <a href="#page1"> Page1 </a> </li>
             <li class="nav-item"> <a href="#page2"> Page2 </a> </li>
             <li class="nav-item"> <a href="#page3"> Page3 </a> </li>
+            <li class="nav-item"> <a href="#page4"> Page4 </a> </li>
         </ul>
     </nav>
 
     <div id="home" class="page-container">
-        <h1 class="Home-Title"> Studbud</h1>
-        <br>
-        <p class="Home-Quote"> <span> "A study session app" </span> </p>
-        <br>
-        <p>Struggling to properly get your study sessions in check? Well Studbud - the study session web app is here to help! 
-            Studbud provides help in 3 main areas: </p>
-        <br>
-        <ul>
-            <li> Task Management: in terms of managing your university tasks, whereas it be note-taking, finishing assignments
-                or taking exams!
-            </li>
+        <div class="Home-Page-Container"> 
+            <h1 class="Home-Title"> Studbud</h1>
             <br>
-            <li> Time Management: in terms of helping to get focused on doing those tasks - with the help of the simple timer
-                and the Pomodoro timer!
-            </li>
+            <p class="Home-Quote"> <span> "A study session app" </span> </p>
             <br>
-            <li> Content Management: in terms of using simple yet effective acronym maker in helping to properly condense
-                many terms and concepts into simple abbreviations!
-            </li>
-        </ul>
-        <br>
-        <button type="button" class="button"> Get Started!</button>
+            <p>Struggling to properly get your study sessions in check? Well Studbud - the study session web app is here to help! 
+                Studbud provides help in 3 main areas: </p>
+            <br>
+            <ul>
+                <li> Task Management: in terms of managing your university tasks, whereas it be note-taking, finishing assignments
+                    or taking exams!
+                </li>
+                <br>
+                <li> Time Management: in terms of helping to get focused on doing those tasks - with the help of the simple timer
+                    and the Pomodoro timer!
+                </li>
+                <br>
+                <li> Content Management: in terms of using simple yet effective acronym maker in helping to properly condense
+                    many terms and concepts into simple abbreviations!
+                </li>
+            </ul>
+            <br>
+            <button type="button" class="button"> Get Started!</button>
+        </div>
     </div>
 
     <div id="page1" class="page-container">
-        <h1>Page 1</h1>
+        <h1>Task Management</h1>
         <br>
-        <nav class="sub-nav">
-            <ul class="nav-links">
-                <li class="nav-item"> <a href="#page1-1" class="active"> Page 1-1</a></li>
-                <li class="nav-item"> <a href="#page1-2"> Page 1-2</a></li>
-            </ul>
-        </nav>
+        <div class="tabs">
+            <nav class="sub-nav">
+                <ul class="nav-links">
+                    <li class="nav-item"> <a href="#page1-1" class="active"> Task List</a></li>
+                    <li class="nav-item"> <a href="#page1-2"> Kanban Board</a></li>
+                </ul>
+            </nav>
+            <br>
+            <div id="page1-1" class="sub-page-container"> 
+                <h2> Description1</h2>
+            </div>
+    
+            <div id="page1-2" class="sub-page-container" style="display: none;
+"> 
+                <h2> Description2</h2>
+            </div>
+
+        </div>  
         
         <br>
-
-        <div id="page1-1" class="sub-page-container"> 
-            <h2> Page 1 - 1</h2>
-        </div>
-
-        <div id="page1-2" class="sub-page-container" style="display: none;
-"> 
-            <h2> Page 1 - 2</h2>
-        </div>
 
     </div>
 
     <div id="page2" class="page-container">
         <h1> Page 2</h1>
+        <br>
+        <div class="tabs">
+            <nav class="sub-nav">
+                <ul class="nav-links">
+                    <li class="nav-item"> <a href="#page2-1" class="active"> Stopwatch Timer</a></li>
+                    <li class="nav-item"> <a href="#page2-2"> Kanban Board</a></li>
+                </ul>
+            </nav>
+                <br>
+                <div id="page2-1" class="sub-page-container"> 
+                    <h2> Description3</h2>
+                </div>
+        
+                <div id="page2-2" class="sub-page-container" style="display: none;
+"> 
+                    <h2> Description4</h2>
+                </div>
+        </div>
+
+
+        
     </div>
 
     <div id="page3" class="page-container">
         <h1> Page 3</h1>
+    </div>
+
+    <div id="page4" class="page-container">
+        <h1> Page 4</h1>
     </div>
 
 
@@ -219,12 +250,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"4cUA2":[function(require,module,exports) {
+})({"6a232":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "3f1e94077ce48927da1de480c3052877";
+module.bundle.HMR_BUNDLE_ID = "a7df9ae3c1d39b37a157a9e02b0033c3";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -520,9 +551,9 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"1K0hc":[function(require,module,exports) {
+},{}],"7xfVQ":[function(require,module,exports) {
 
-},{}]},["4cUA2","1K0hc"], "1K0hc", "parcelRequirec526")
+},{}]},["6a232","7xfVQ"], "7xfVQ", "parcelRequirec526")
 
 </script>
 
