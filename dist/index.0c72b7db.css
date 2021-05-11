@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
+* {
+  margin: 0;
+  padding: 0;
+}
 .Home-Page-Container {
   margin: 0;
   padding: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-45%) translateY(-55%);
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0px 0px 0px 50px;
 }
 .logo-text {
   text-align: center;
@@ -22,6 +27,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
+  box-shadow: 0 0 20px 0px rgba(46, 196, 182, 0.16);
   margin: 4px 2px;
   border-radius: 50px;
   cursor: pointer;
@@ -67,6 +73,9 @@
 .Home-Body-Text {
   font-size: 18px;
 }
+.Home-Body-Text ul {
+  list-style-position: inside;
+}
 .top-nav {
   width: 150px;
   height: 100%;
@@ -82,17 +91,18 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 .top-nav .nav-links .nav-item a {
   display: block;
   text-decoration: none;
   color: white;
-  padding: 3.2em 0;
+  padding: 6.79vh 0;
   text-align: center;
   margin-bottom: 1px;
 }
 .top-nav .nav-links .nav-item a:hover {
-  background: red;
+  background: #E84855;
   color: #fff;
 }
 .top-nav .nav-links .nav-item a.active {
@@ -101,7 +111,7 @@
 }
 .tabs {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   padding: 20px 30x;
   background: #f9f9f9;
   border-radius: 50px;
@@ -113,7 +123,7 @@
   border-top-right-radius: 50px;
   background-color: #123;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .sub-nav .nav-links {
@@ -123,7 +133,7 @@
 .sub-nav .nav-links .nav-item a {
   text-decoration: none;
   color: white;
-  padding: 1em 2em;
+  padding: 1em 2em 2em 0em;
 }
 .sub-nav .nav-links .nav-item a:hover {
   color: #abc;
@@ -137,17 +147,80 @@
 .sub-page-container {
   margin-left: 30px;
 }
-/*
-@media only screen and (max-width: 600px) {
-    .nav-item a{
-        display:none;
-    }
+@media only screen and (max-width: 855px) {
+  .top-nav {
+    width: 80px;
+    flex-direction: column;
+  }
 
-    .fa-fw{
-        font-size: 3em;
-        text-align: center;
-    }
+  span.title {
+    display: none;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+  }
+
+  .top-nav .nav-links .nav-item a {
+    padding: 3em 0;
+  }
+
+  .fa-fw {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .logo-text {
+    font-size: 12px;
+  }
+
+  .Home-Title {
+    font-size: 30px;
+  }
+
+  .Home-Quote {
+    font-size: 20px;
+  }
+
+  .Home-Body-Text {
+    font-size: 10px;
+  }
 }
+@media only screen and (max-width: 768px) {
+  .top-nav .nav-links .nav-item a {
+    padding: 3em 0;
+  }
+
+  .button {
+    padding: 10px 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .top-nav .nav-links .nav-item a {
+    padding: 2.8em 0;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .top-nav .nav-links .nav-item a {
+    padding: 2.2em 0;
+  }
+
+  .Home-Title {
+    font-size: 25px;
+  }
+
+  .Home-Quote {
+    font-size: 16px;
+  }
+
+  .Home-Body-Text {
+    font-size: 9px;
+  }
+}
+/*
+    NOTE: Have a way to distinguish nav icons with nav text - in order to properly allow use of display: none; for mobile devices
 */
 * {
   margin: 0;
