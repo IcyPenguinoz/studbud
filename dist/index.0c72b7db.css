@@ -270,4 +270,24 @@
 .page-container:not(#home) {
   display: none;
 }
+#task-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "taskform tasklist";
+}
+#taskform {
+  grid-area: taskform;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#taskform label {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+}
+#tasklist {
+  grid-area: tasklist;
+}
 /*# sourceMappingURL=index.0c72b7db.css.map */

@@ -75,6 +75,53 @@
                 <div class = "add-Button">
                     <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
                  </div>
+                 <div id = "task-grid">
+                    <form id = "taskform">
+                        <label for = "task">Task: </label>
+                        <input type = "text" name = "task" id = "taskInput"> </input>
+                        <br> 
+                  
+                        <!--- Date Input -->
+                        <label for = "dueDate"> Due Date: </label> 
+                        <input type = "date" name = "dueDate" id = "dueDateInput"> 
+                  
+                        <br>
+                  
+                  
+                        <!-- Time Input --> 
+                        <label for = "completionTime"> Completion Time: </label> 
+                        <input type = "time" name = "completionTime" id = "completionTimeInput"> 
+                  
+                        <br> 
+                        <label for = "estimatedTime"> Estimated completion time (in mins): </label>
+                        <input type = "number" name = "estimatedTime" id = "estimatedTimeInput">
+                  
+                        <br>
+                  
+                        <!-- Priority -->
+                        <label for = "priority"> Task Priority: </label>
+                        <select name = "priority" id = "priorityInput">
+                          <option value = ""> Select one: </option>
+                          <option value = "Low"> Low </option>
+                          <option value = "Medium"> Medium </option>
+                          <option value = "High"> High </option>
+                        </select>
+                  
+                  
+                        <!-- Submit Button -->
+                        <button type = "submit"> Submit </button> 
+                  
+                  
+                  
+                      </form>
+                      <div id = "tasklist">
+                          <p id= "emptylist"> You have not added any tasks yet.</p>
+                          <br>
+                          <ul></ul>
+
+                        
+                      </div>
+                 </div>
             </div>
     
             <div id = "page1-2" class = "sub-page-container" style = "display: none;"> 

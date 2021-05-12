@@ -75,6 +75,53 @@
                 <div class="add-Button">
                     <button class="buttonTag"><i class="fas fa-plus"></i></button>
                  </div>
+                 <div id="task-grid">
+                    <form id="taskform">
+                        <label for="task">Task: </label>
+                        <input type="text" name="task" id="taskInput"> 
+                        <br> 
+                  
+                        <!--- Date Input -->
+                        <label for="dueDate"> Due Date: </label> 
+                        <input type="date" name="dueDate" id="dueDateInput"> 
+                  
+                        <br>
+                  
+                  
+                        <!-- Time Input --> 
+                        <label for="completionTime"> Completion Time: </label> 
+                        <input type="time" name="completionTime" id="completionTimeInput"> 
+                  
+                        <br> 
+                        <label for="estimatedTime"> Estimated completion time (in mins): </label>
+                        <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                  
+                        <br>
+                  
+                        <!-- Priority -->
+                        <label for="priority"> Task Priority: </label>
+                        <select name="priority" id="priorityInput">
+                          <option value=""> Select one: </option>
+                          <option value="Low"> Low </option>
+                          <option value="Medium"> Medium </option>
+                          <option value="High"> High </option>
+                        </select>
+                  
+                  
+                        <!-- Submit Button -->
+                        <button type="submit"> Submit </button> 
+                  
+                  
+                  
+                      </form>
+                      <div id="tasklist">
+                          <p id="emptylist"> You have not added any tasks yet.</p>
+                          <br>
+                          <ul></ul>
+
+                        
+                      </div>
+                 </div>
             </div>
     
             <div id="page1-2" class="sub-page-container" style="display: none;
@@ -267,12 +314,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"3Z9XF":[function(require,module,exports) {
+})({"5fG4R":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "90f096e85b16ec341bdef2b11340a0e4";
+module.bundle.HMR_BUNDLE_ID = "8159d22fe64e221e302ea4cfb91a420b";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -568,9 +615,9 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"9L7Jh":[function(require,module,exports) {
+},{}],"1VZ1X":[function(require,module,exports) {
 
-},{}]},["3Z9XF","9L7Jh"], "9L7Jh", "parcelRequirec526")
+},{}]},["5fG4R","1VZ1X"], "1VZ1X", "parcelRequirec526")
 
 </script>
 
