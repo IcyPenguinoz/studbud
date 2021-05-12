@@ -177,6 +177,31 @@
   cursor: pointer;
   font-weight: bold;
 }
+.timer-rectangle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 45%;
+  bottom: 100%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 30%;
+  background-color: #2EC4B6;
+  box-shadow: 0 0 20px 0px rgba(46, 196, 182, 0.16);
+  padding: 15px 15px;
+  margin: 40px 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.timer-rectangle div {
+  color: white;
+  font-size: 60px;
+  width: calc(100%/3);
+  text-align: center;
+}
 @media only screen and (max-width: 855px) {
   .top-nav {
     width: 80px;
@@ -285,7 +310,6 @@
   margin-bottom: 10px;
   display: block;
   width: 100%;
-  white-space: nowrap;
 }
 #tasklist {
   grid-area: tasklist;
