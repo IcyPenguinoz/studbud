@@ -188,9 +188,9 @@
   transform: translate(-50%, -50%);
   width: 50%;
   height: 30%;
-  background-color: #2EC4B6;
+  background-image: linear-gradient(to bottom right, #51d183, #60b5d4);
   box-shadow: 0 0 20px 0px rgba(46, 196, 182, 0.16);
-  padding: 15px 15px;
+  padding: 15px;
   margin: 40px 2px;
   border-radius: 50px;
   cursor: pointer;
@@ -198,9 +198,26 @@
 }
 .timer-rectangle div {
   color: white;
-  font-size: 60px;
-  width: calc(100%/3);
+  font-size: 80px;
+  width: 15%;
   text-align: center;
+  margin-bottom: 50px;
+}
+.timer-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 20%;
+  bottom: 0%;
+  left: 40%;
+}
+.timer-buttons div {
+  float: left;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
 }
 @media only screen and (max-width: 855px) {
   .top-nav {
