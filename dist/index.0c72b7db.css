@@ -149,12 +149,13 @@
       Hover size defined by using padding - however need to ask how to make it responsive - not hard-coded
       Based on auto-margin, get rid of paddings 
       text-align: center
+      Could use something with flexbox to justify hover size
   */
   /*
-      CSS Grid 
+      CSS Grid for the bottom text from timer OR can try doing :before and :after 
   */
   /*
-      Music Player = iframe 
+      Music Player = iframe, not main priority
   */
   padding: 1.7em 7.965em;
   font-size: 25px;
