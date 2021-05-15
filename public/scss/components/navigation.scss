@@ -369,6 +369,131 @@
     
 }
 
+.pomodoro-timer-spacing{
+    padding-right: 500px;
+    background: red;
+}
+
+
+
+.timer-rectangle2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:30%;
+    top:45%;
+    bottom: 100%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 30%;
+    background-image: linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1));
+    box-shadow: 0 0 20px 0px rgba(46,196,182,0.16);
+    padding: 15px;
+    margin: 40px 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.timer-rectangle2 div{
+    color: white;
+    font-size: 5.2vw;
+    width: 15%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.timer-rectangle2 div:before
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 25%;
+    font-size: 1.3vw;
+    width: 14.5%;
+    text-align: center;
+}
+
+
+.timer-rectangle2 div.minutes:before
+{
+    content: 'MINUTES';
+
+}
+
+
+.timer-rectangle2 div.seconds:before
+{
+    content: 'SECONDS';
+    margin-right: 10px;
+
+}
+
+.timer2-buttons{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 25%;
+    bottom: 5%;
+    left: 2%;
+    text-align: center;
+}
+
+
+.start2-button{
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 50px;
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.reset2-button{
+    border: none;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 50px;
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.stop2-button{
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 50px;
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.timer2-buttons div{
+    float: left;
+    text-align: center;
+    width: 30%;
+    font-size: 40px;
+    
+}
+
 .acronym-container{
     margin-top: 50px;
 
