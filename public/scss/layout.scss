@@ -22,4 +22,21 @@
 }
 
 
+@media only screen and (max-width: 855px) {
+  .app-container{
+      padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .tabs{
+    height: 60vh;
+  }
+  .sub-nav .nav-links .nav-item a{
+    padding: 4.5em 5em;
+    font-size: 9px;
+  } 
+}
+
+
 
