@@ -25,6 +25,7 @@ function addTask(taskDescription, dueDate, priorityRating, estimatedTime, comple
   let d = new Date();
   let dateCreated = d.getFullYear(); 
   let task = {
+    id: Date.now(), 
     taskDescription,
     dueDate,
     dateCreated,
@@ -34,17 +35,24 @@ function addTask(taskDescription, dueDate, priorityRating, estimatedTime, comple
     completionStatus
   };
   taskListArray.push(task);
+  console.log(taskListArray);
   renderTask(task);
   
 }
 
 
 function renderTask(task){
+
+  updateEmpty();
+
   // Create HTML elements
   let item = document.createElement("li");
+  item.setAttribute('data-id', task.id);
   item.innerHTML = "<p>" + task.taskDescription + "</p>";
 
-  tasklist.appendChild(item)
+  tasklist.appendChild(item);
+
+
 
   // Extra Task DOM elements 
   let delButton = document.createElement("button");
@@ -56,9 +64,29 @@ function renderTask(task){
   //Event Listeners for DOM elements
   delButton.addEventListener("click", function(event){
     event.preventDefault();
+    let id = event.target.parentElement.getAttribute('data-id');
+    let index = taskListArray.findIndex(task => task.id === Number(id));
+    removeItemFromArray(taskListArray, index);
+    updateEmpty();
     item.remove();
   })
 
   // Clear the input form 
   form.reset();
+}
+
+
+function removeItemFromArray(arr, index){
+  if (index > -1){
+    arr.splice(index, 1);
+  }
+  return arr;
+}
+
+function updateEmpty(){
+  if (taskListArray.length > 0){
+    document.getElementById('emptylist').style.display = 'none';
+  } else {
+    document.getElementById('emptylist').style.display = 'block';
+  }
 }
