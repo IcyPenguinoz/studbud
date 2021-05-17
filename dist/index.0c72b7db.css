@@ -113,6 +113,13 @@
   display: flex;
   align-items: center;
 }
+.top-text-title {
+  float: left;
+}
+.top-text-paragraph {
+  position: relative;
+  float: right;
+}
 .top-text p {
   font-size: 8px;
 }
@@ -173,16 +180,15 @@
 .sub-page-container {
   margin-left: 30px;
 }
-.task-box {
+#task-box {
   display: flex;
-  justify-content: center;
   flex-direction: row;
 }
-.task-box-details {
+#task-box div {
   width: 25%;
   height: 150px;
   background-color: red;
-  margin: 25px;
+  margin: 20px 40px;
   font-size: 30px;
   text-align: center;
 }

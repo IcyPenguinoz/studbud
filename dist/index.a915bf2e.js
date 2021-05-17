@@ -446,6 +446,7 @@ var _componentsNavigation = require('./components/navigation');
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
 require('./components/tasklist');
+require('./components/addButton');
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
 var nav = new _componentsNavigationDefault.default(links, pages);
@@ -466,7 +467,7 @@ subNav.links.forEach(link => {
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/addButton":"1wlmT"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 class Navigation {
@@ -632,6 +633,15 @@ function updateEmpty(){
   } else {
     document.getElementById('emptylist').style.display = 'block';
   }
+}
+},{}],"1wlmT":[function(require,module,exports) {
+const BtnAdd = document.querySelector(".buttonTag");
+
+BtnAdd.addEventListener("click", AddNew);
+
+function AddNew(){
+    const newDiv = document.createElement("div");
+    document.getElementById('task-box').appendChild(newDiv);
 }
 },{}]},["4de8m","4B4Nd"], "4B4Nd", "parcelRequirec526")
 
