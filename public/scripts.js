@@ -26,4 +26,3 @@ subNav.links.forEach((link) => {
         subNav.setPage(pageId);
     })
 })
-

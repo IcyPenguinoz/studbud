@@ -109,11 +109,6 @@
   font-weight: bold;
   background: red;
 }
-.task-page-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .top-text {
   display: flex;
   align-items: center;
@@ -177,6 +172,19 @@
 }
 .sub-page-container {
   margin-left: 30px;
+}
+.task-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.task-box-details {
+  width: 25%;
+  height: 150px;
+  background-color: red;
+  margin: 25px;
+  font-size: 30px;
+  text-align: center;
 }
 .add-Button {
   position: absolute;

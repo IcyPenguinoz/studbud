@@ -559,7 +559,7 @@ button.addEventListener("click", function(event){
   let estimatedTime = estimatedTimeInput.value;
   let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
   addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
-  console.log(taskList);
+
 })
 
 var taskListArray = [];
