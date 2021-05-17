@@ -60,9 +60,15 @@
 
     <div id ='page1' class = "page-container">
         <div class = "top-text">
-            <h1>Task Management</h1>
+            <div class = "top-text-title">
+                <h1>Task Management</h1>
+            </div>
+            <div class = "middle-line">
+            </div>
+            <div class = "top-text-paragraph">
             <p> This is where you can manage your tasks via adding your own tasks and detailing them alongside being able to organise them
                 further by using the "Kanban Board" feature!</p>
+            </div>
         </div>
         <br>
         <div class = "tabs">
@@ -75,24 +81,8 @@
             <br>
             <div id = "page1-1" class = "sub-page-container"> 
                 <h2> Description1</h2>
-                <div class = "task-box">
+                <div id = "task-box">
                     <!--Slider Box-->
-                    <div class = "task-box-details">
-                        <p> Hello!</p>
-                        <p> Hello2!</p>
-                    </div>
-                    <div class = "task-box-details">
-                        <p> Test1</p>
-                        <p> Test2</p>
-                    </div>
-                    <div class = "task-box-details">
-                        <p> Test1</p>
-                        <p> Test2</p>
-                    </div>
-                    <div class = "task-box-details">
-                        <p> Test1</p>
-                        <p> Test2</p>
-                    </div>
                 </div>
                 <div class = "add-Button">
                     <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
@@ -226,6 +216,7 @@
             <nav class = "sub-nav">
                 <ul class = "nav-links">
                     <li class = "nav-item"> <a href = "#page3-1" class = "active"> <i class="fas fa-pencil-ruler fa-fw"></i> Acronym Maker</a></li>
+                    <li class = "nav-item"> <a href = "#page3-2"> <i class="fas fa-eye"></i> Acronym Viewer</a></li>
                 </ul>
             </nav>
             <br>
@@ -244,6 +235,9 @@
                 <div class = "acronym-bottom-text">
                     <p>Then click generate to generate your acronym!</p>
                 </div>
+            </div>
+            <div id = "page3-2" class = "sub-page-container" style = "display: none;">
+                <h1> Acronym Viewer</h1>
             </div>
         </div>
     </div>
