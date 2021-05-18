@@ -128,24 +128,56 @@
     
 }
 
-
 .top-text{
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
+    
 
 }
+
 .top-text-title{
-    float:left;
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 1.17vw;
+
+    
 }
+
+/*Dot Test
+.top-text-title::before{
+    content: 'CAT';
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5em;
+    background-color: black;
+    border-radius: 50%;
+
+
+}
+*/
+
+.top-text-middle-line{
+    border-left: 6px solid black;
+    margin: 0 auto;
+    width: 5%;
+    height: 6.63vh;
+    text-align: center;
+
+}
+/*     background: linear-gradient(#000, #000) no-repeat center/6px 100%; */
 
 .top-text-paragraph{
-    position: relative;
     float:right;
+    font-size: 0.9vw;
+    width: 55%;
 
-}
-
-.top-text p{
-    font-size: 8px;
 }
 
 .tabs{
@@ -545,9 +577,6 @@
 
 }
 
-.music-nav-title{
-    font-size: 2vw;
-}
 
 .responsive-iframe{
     position: absolute;
@@ -563,6 +592,17 @@
 
 
 @media only screen and (max-width: 855px) {
+
+    .top-text{
+        flex-direction: column;
+    }
+
+    .top-text-middle-line{
+        transform: rotate(90deg);
+        height: 40px;
+        width: 0%;
+
+    }
 
     .top-nav{
         width: 80px;
