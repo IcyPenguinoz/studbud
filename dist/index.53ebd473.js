@@ -458,11 +458,15 @@ var KanbanTest = new jKanban({
             'item'  : [
                 {
                    'id':'task-1',
-                    'title':'Try drag me',
+                    'title':'Do notes on lecture',
                 },
                 {
-                   'id':'task-2',
+                   'id':'#task-2',
                     'title':'Click me!!',
+                },
+                {
+                    'id': 'task-box',
+                    'title': 'test!',
                 }
             ]
         },
@@ -472,7 +476,7 @@ var KanbanTest = new jKanban({
             'class' : 'warning',
             'item'  : [
                 {
-                    'title':'Do Something!',
+                    'title': 'Study for exam',
                 },
                 {
                     'title':'Run?',
@@ -486,7 +490,7 @@ var KanbanTest = new jKanban({
             'class' : 'success',
             'item'  : [
                 {
-                    'title':'All right',
+                    'title':'Finish assignment',
                 },
                 {
                     'title':'Ok!',
