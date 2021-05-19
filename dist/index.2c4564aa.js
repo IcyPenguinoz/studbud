@@ -1,300 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/index.2a7eed84.css">
-    <link rel="stylesheet" href="/index.86449d9e.css">
-    <link rel="stylesheet" href="/index.e914d45c.css"> 
-    <script src="/index.da934a41.js"></script>
-
-    <link href="/index.0c72b7db.css" rel="stylesheet" type="text/css">
-</head>
-
-<body class="app-container">
-
-    <nav class="top-nav"> 
-        <h2 class="logo-text"> Studbud</h2>   
-        <ul class="nav-links">
-            <li class="nav-item"> <a href="#home" class="active"> 
-            <i class="fas fa-home fa-fw"> </i> <span class="title"> Home </span> </a> </li>
-            <li class="nav-item"> <a href="#page1"> 
-            <i class="fas fa-tasks fa-fw"></i> <span class="title">Task  </span> </a> </li>
-            <li class="nav-item"> <a href="#page2"> 
-            <i class="fas fa-clock fa-fw"></i> <span class="title"> Time </span></a> </li>
-            <li class="nav-item"> <a href="#page3"> 
-            <i class="fas fa-pencil-ruler fa-fw"></i> <span class="title"> Content </span> </a> </li>
-            <li class="nav-item"> <a href="#page4">
-            <i class="fas fa-music fa-fw"></i> <span class="title"> Music </span> </a> </li>
-        </ul>
-    </nav>
-
-    <div id="home" class="page-container">
-        <div class="Home-Page-Container"> 
-            <h1 class="Home-Title"> Studbud</h1>
-            <br>
-            <p class="Home-Quote"> <span> "A study session app" </span> </p>
-            <br>
-            <div class="Home-Body-Text">
-                <p>Struggling to properly get your study sessions in check? Well Studbud - the study session web app is here to help! 
-                    Studbud provides help in 3 main areas: </p>
-                
-                <br>
-                <ul>
-                    <li> Task Management: in terms of managing your university tasks, whereas it be note-taking, finishing assignments
-                        or taking exams!
-                    </li>
-                    <br>
-                    <li> Time Management: in terms of helping to get focused on doing those tasks - with the help of the simple timer
-                        and the Pomodoro timer!
-                    </li>
-                    <br>
-                    <li> Content Management: in terms of using simple yet effective acronym maker in helping to properly condense
-                        many terms and concepts into simple abbreviations!
-                    </li>
-                </ul>
-            </div>
-            <br>
-            <button type="button" class="button"> Get Started!</button>
-        </div>
-    </div>
-
-    <div id="page1" class="page-container">
-        <div class="top-text">
-            <div class="top-text-title">
-                <h1>Task Management</h1>
-            </div>
-            <div class="top-text-middle-line">
-            </div>
-            <div class="top-text-paragraph">
-            <p> This is where you can manage your tasks via adding your own tasks and detailing them alongside being able to organise them
-                further by using the "Kanban Board" feature!</p>
-            </div>
-        </div>
-        <br>
-        <div class="tabs">
-            <nav class="sub-nav">
-                <ul class="nav-links">
-                    <li class="nav-item"> <a href="#page1-1" class="active">  <i class="fas fa-tasks fa-fw"></i> Task List</a></li>
-                    <li class="nav-item"> <a href="#page1-2"> <i class="fas fa-table fa-fw"></i> Kanban Board</a></li>
-                </ul>
-            </nav>
-            <br>
-            <div id="page1-1" class="sub-page-container"> 
-                <h2> Description1</h2>
-                <div id="task-box">
-                </div>
-                
-                <div class="add-Button">
-                    <button class="buttonTag"><i class="fas fa-plus"></i></button>
-                 </div>
-                 <div id="task-grid">
-                    <form id="taskform" style="display:none
-">
-                        <label for="task">Task: </label>
-                        <input type="text" name="task" id="taskInput"> 
-                        <br> 
-                  
-                        <!--- Date Input -->
-                        <label for="dueDate"> Due Date: </label> 
-                        <input type="date" name="dueDate" id="dueDateInput"> 
-                  
-                        <br>
-                  
-                  
-                        <!-- Time Input --> 
-                        <label for="completionTime"> Completion Time: </label> 
-                        <input type="time" name="completionTime" id="completionTimeInput"> 
-                  
-                        <br> 
-                        <label for="estimatedTime"> Estimated completion time (in mins): </label>
-                        <input type="number" name="estimatedTime" id="estimatedTimeInput">
-                  
-                        <br>
-                  
-                        <!-- Priority -->
-                        <label for="priority"> Task Priority: </label>
-                        <select name="priority" id="priorityInput">
-                          <option value=""> Select one: </option>
-                          <option value="Low"> Low </option>
-                          <option value="Medium"> Medium </option>
-                          <option value="High"> High </option>
-                        </select>
-                  
-                  
-                        <!-- Submit Button -->
-                        <button type="submit"> Submit </button> 
-                  
-                  
-                  
-                      </form>
-                      <div id="tasklist" style="display:none
-">
-                          <p id="emptylist"> You have not added any tasks yet.</p>
-                          <br>
-                          <ul></ul>
-
-                        
-                      </div>
-                 </div>
-            </div>
-    
-            <div id="page1-2" class="sub-page-container" style="display: none;
-"> 
-                <div id="myKanban">
-                </div>
-                <div class="add-Button">
-                    <button class="buttonTag"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-
-            <!--Incorporation of jKanban element-->
-            <script src="/index.53ebd473.js"></script>
-
-        </div>  
-        
-        <br>
-
-    </div>
-
-    <div id="page2" class="page-container">
-        <div class="top-text">
-            <div class="top-text-title">
-                <h1> Time Management</h1>
-            </div>
-            <div class="top-text-middle-line"></div>
-            <div class="top-text-paragraph">
-                <p> This is where you can help to manage your time in doing those tasks - whether it be using the simple stop watch
-                    timer - or the Pomodoro timer for those intense sessions!
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="tabs">
-            <nav class="sub-nav">
-                <ul class="nav-links">
-                    <li class="nav-item"> <a href="#page2-1" class="active"> <i class="fas fa-clock fa-fw"></i> Stopwatch Timer</a></li>
-                    <li class="nav-item"> <a href="#page2-2"> <i class="fas fa-hourglass-start fa-fw"></i>Pomodoro Timer</a></li>
-                </ul>
-            </nav>
-                <br>
-                <div id="page2-1" class="sub-page-container"> 
-                    <h2> Description3</h2>
-                    <div class="timer-rectangle">
-                        <div class="hours">01</div>
-                        <div class="hours-dot">:</div>
-                        <div class="minutes">23</div>
-                        <div class="minutes-dot">:</div>
-                        <div class="seconds">51</div>
-                    </div>
-                    <div class="timer-buttons">
-                        <div class="start">
-                            <button class="start-button"> Start </button>
-                        </div>
-                        <div class="reset">
-                            <button class="reset-button"> Reset </button>
-                        </div>
-                        <div class="stop"> 
-                            <button class="stop-button">Stop  </button>
-                        </div>
-                    </div>
-                </div>
-        
-                <div id="page2-2" class="sub-page-container" style="display: none;
-"> 
-                    <h2> Description4</h2>
-                    <div class="pomodoro-timer-spacing">
-                        <div class="timer-rectangle2">
-                            <div class="minutes">25</div>
-                            <div class="minutes-dot">:</div>
-                            <div class="seconds">00</div>
-                        </div>
-                    </div>
-                    <div class="timer2-buttons">
-                        <div class="start">
-                            <button class="start2-button"> Start </button>
-                        </div>
-                        <div class="reset">
-                            <button class="reset2-button"> Reset </button>
-                        </div>
-                        <div class="stop"> 
-                            <button class="stop2-button">Stop  </button>
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-
-        
-    </div>
-
-    <div id="page3" class="page-container">
-        <div class="top-text">
-            <div class="top-text-title">
-                <h1> Content Management</h1>
-            </div>
-            <div class="top-text-middle-line"></div>
-            <div class="top-text-paragraph">
-                <p> This is where you can use the acronym maker in helping to condense those many phases and words you struggle to 
-                    remember - into simple abbreviations and phrases!
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="tabs">
-            <nav class="sub-nav">
-                <ul class="nav-links">
-                    <li class="nav-item"> <a href="#page3-1" class="active"> <i class="fas fa-pencil-ruler fa-fw"></i> Acronym Maker</a></li>
-                    <li class="nav-item"> <a href="#page3-2"> <i class="fas fa-eye"></i> Acronym Viewer</a></li>
-                </ul>
-            </nav>
-            <br>
-            <div id="page3-1" class="sub-page-container"> 
-                <div class="acronym-text">
-                    <p> Enter in at least 3 words - followed by a space! For example: cat dog chicken.</p>
-                </div>
-                <div class="acronym-box">
-                    <div class="acronym-box-text">
-                        <p> Enter your words here</p>
-                    </div>
-                    <div class="acronym-generate-button">
-                        <h2> Generate</h2>
-                    </div>
-                </div>
-                <div class="acronym-bottom-text">
-                    <p>Then click generate to generate your acronym!</p>
-                </div>
-            </div>
-            <div id="page3-2" class="sub-page-container" style="display: none;
-">
-                <h1> Acronym Viewer</h1>
-            </div>
-        </div>
-    </div>
-
-    <div id="page4" class="page-container">
-        <h1> Music Player</h1>
-        <br>
-        <div class="tabs">
-            <nav class="sub-nav">
-                <ul class="nav-links">
-                    <li class="nav-item"> <a href="#page4-1" class="active"> <i class="fas fa-music fa-fw"></i> Music Player</a></li>
-                </ul>
-            </nav>
-            <div id="page4-1" class="sub-page-container"> 
-                <br>
-                <h2> Description 5</h2>
-            <div class="iframe-container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/9FvvbVI5rYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
-        </div>
-
-    </div>
-
-
-    <script src="/index.a915bf2e.js">// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -436,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"2hXz4":[function(require,module,exports) {
+})({"5Pd0H":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "37265915dd373057e28a94239b05a8ad";
+module.bundle.HMR_BUNDLE_ID = "cda60070029587502b208e962c4564aa";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -737,13 +441,16 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"3WKlw":[function(require,module,exports) {
+},{}],"7joJ3":[function(require,module,exports) {
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+},{}]},["5Pd0H","7joJ3"], "7joJ3", "parcelRequirec526")
 
-},{}]},["2hXz4","3WKlw"], "3WKlw", "parcelRequirec526")
-
-</script>
-
-
-</div></body>
-
-</html> 
+//# sourceMappingURL=index.2c4564aa.js.map
