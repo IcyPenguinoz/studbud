@@ -348,6 +348,26 @@
   padding-right: 500px;
   background: red;
 }
+#myKanban {
+  padding-right: 10px;
+  text-align: center;
+}
+.success {
+  background: #00B961;
+  color: #fff;
+}
+.info {
+  background: #B20D30;
+  color: #fff;
+}
+.warning {
+  background: #F4CE46;
+  color: #fff;
+}
+.error {
+  background: #FB7D44;
+  color: #fff;
+}
 .timer-rectangle2 {
   position: absolute;
   display: flex;

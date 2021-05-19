@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel = "stylesheet" href = "fontawesome/css/all.min.css">
     <link rel = "stylesheet" href = "fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="jkanban/dist/jkanban.min.css"> 
+    <script src="jkanban/dist/jkanban.min.js"></script>
     <link href = "./scss/main.scss" rel = "stylesheet" type = "text/css">
 </head>
 
@@ -137,11 +139,15 @@
             </div>
     
             <div id = "page1-2" class = "sub-page-container" style = "display: none;"> 
-                <h2> Description2</h2>
+                <div id="myKanban">
+                </div>
                 <div class = "add-Button">
                     <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
                 </div>
             </div>
+
+            <!--Incorporation of jKanban element-->
+            <script src="components/KanbanBoard.js"></script>
 
         </div>  
         
@@ -284,6 +290,7 @@
 
     <script src = "scripts.js">
     </script>
+
 
 </body>
 
