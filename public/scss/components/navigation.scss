@@ -329,7 +329,7 @@
 
 .timer-rectangle div.hours:before
 {
-    content: 'HOURS';
+    content: 'MINUTES';
     
 
 }
@@ -337,14 +337,14 @@
 
 .timer-rectangle div.minutes:before
 {
-    content: 'MINUTES';
+    content: 'SECONDS';
 
 }
 
 
 .timer-rectangle div.seconds:before
 {
-    content: 'SECONDS';
+    content: 'MILLISECONDS';
     margin-right: 10px;
 
 }

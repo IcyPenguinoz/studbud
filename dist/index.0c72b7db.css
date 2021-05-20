@@ -279,13 +279,13 @@
   text-align: center;
 }
 .timer-rectangle div.hours:before {
-  content: "HOURS";
-}
-.timer-rectangle div.minutes:before {
   content: "MINUTES";
 }
-.timer-rectangle div.seconds:before {
+.timer-rectangle div.minutes:before {
   content: "SECONDS";
+}
+.timer-rectangle div.seconds:before {
+  content: "MILLISECONDS";
   margin-right: 10px;
 }
 .timer-buttons {
