@@ -258,7 +258,6 @@
   padding: 15px;
   margin: 40px 2px;
   border-radius: 50px;
-  cursor: pointer;
   font-weight: bold;
 }
 .timer-rectangle div {
@@ -278,13 +277,13 @@
   width: 14.5%;
   text-align: center;
 }
-.timer-rectangle div.hours:before {
+.timer-rectangle div.minutes:before {
   content: "MINUTES";
 }
-.timer-rectangle div.minutes:before {
+.timer-rectangle div.seconds:before {
   content: "SECONDS";
 }
-.timer-rectangle div.seconds:before {
+.timer-rectangle div.milliseconds:before {
   content: "MILLISECONDS";
   margin-right: 10px;
 }
