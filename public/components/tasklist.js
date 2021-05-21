@@ -1,7 +1,8 @@
 const form = document.getElementById("taskform")
 const button = document.querySelector("#taskform > button")
 var taskInput = document.getElementById("taskInput");
-var tasklist = document.querySelector("#tasklist > ul");
+/* Added a > div to direct the tasklist inside div container - for flexbox element*/
+var tasklist = document.querySelector("#tasklist > ul > div");
 
 var dueDateInput = document.getElementById("dueDateInput");
 var completionTimeInput = document.getElementById("completionTimeInput");
@@ -19,7 +20,7 @@ button.addEventListener("click", function(event){
 
 })
 
-var taskListArray = [];
+// var taskListArray = [];
 
 function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionTime, completionStatus) {
   let d = new Date();
@@ -46,10 +47,12 @@ function renderTask(task){
   updateEmpty();
 
   // Create HTML elements
+  //Find way to add all elements, e.g. task, due date, completion time etc to 1 task 
   let item = document.createElement("li");
+  item.classList.add("task-list-boxes");
   item.setAttribute('data-id', task.id);
-  item.innerHTML = "<p>" + task.taskDescription + "</p>";
-
+  item.innerHTML = "<h2>" + task.taskDescription + "</h2>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
+  + "<p>" + "Estimated Time: " + task.estimatedTime + " minutes" + "</p>" + "<p>" + "Priority Rating: " + task.priorityRating + "</p>";
   tasklist.appendChild(item);
 
 

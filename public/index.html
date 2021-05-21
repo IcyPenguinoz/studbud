@@ -83,8 +83,11 @@
             <br>
             <div id = "page1-1" class = "sub-page-container"> 
                 <h2> Description1</h2>
-                <div id = "task-box">
-                    <div> </div>
+                <div id = "task-box" style = "display: none;">
+                    <div> 
+                        <h1> Study for Exam</h1> 
+                        <hr/>
+                    </div>
                     <div> </div>
                     <div> </div>
                     <div> </div>
@@ -94,7 +97,7 @@
                     <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
                  </div>
                  <div id = "task-grid">
-                    <form id = "taskform" style = "display:none">
+                    <form id = "taskform">
                         <label for = "task">Task: </label>
                         <input type = "text" name = "task" id = "taskInput"> </input>
                         <br> 
@@ -132,10 +135,14 @@
                   
                   
                       </form>
-                      <div id = "tasklist" style = "display:none">
+                      <div id = "tasklist">
                           <p id= "emptylist"> You have not added any tasks yet.</p>
                           <br>
-                          <ul></ul>
+                          <ul>
+                            <div class = "task-list-box-container"> 
+                              
+                            </div>
+                          </ul>
 
                         
                       </div>
@@ -150,8 +157,6 @@
                 </div>
             </div>
 
-            <!--Incorporation of jKanban element-->
-            <script src="components/KanbanBoard.js"></script>
 
         </div>  
         
@@ -294,8 +299,9 @@
     </div>
 
 
-    <script src = "scripts.js">
-    </script>
+    <script src = "scripts.js"></script>
+    <!--Incorporation of jKanban element-->
+    <!-- <script src="components/KanbanBoard.js"></script> -->
 </body>
 
 </html> 

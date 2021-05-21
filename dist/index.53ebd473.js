@@ -458,7 +458,11 @@ var KanbanTest = new jKanban({
             'item'  : [
                 {
                    'id':'task-1',
-                    'title':'Do notes on lecture',
+                   /* Can use html semantic tags for title elements as seen below*/
+                   'title': `
+                   <h1> Hello! </h1>
+                   <p> Test Description </p>`,
+                   
                 },
                 {
                    'id':'#task-2',
@@ -474,14 +478,7 @@ var KanbanTest = new jKanban({
             'id' : '_inprogress',
             'title'  : 'In Progress',
             'class' : 'warning',
-            'item'  : [
-                {
-                    'title': 'Study for exam',
-                },
-                {
-                    'title':'Run?',
-                }
-            ]
+            'item'  : taskListArray
         },
         {
             'id' : '_done',
