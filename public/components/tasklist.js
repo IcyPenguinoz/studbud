@@ -20,7 +20,7 @@ button.addEventListener("click", function(event){
 
 })
 
-// var taskListArray = [];
+var taskListArray = [];
 
 function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionTime, completionStatus) {
   let d = new Date();
