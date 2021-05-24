@@ -1,6 +1,4 @@
-function initKanban(){
-
-new jKanban({
+var kanban = new jKanban({
     element : '#myKanban',
     gutter  : '10px',
     responsivePercentage: true,
@@ -36,7 +34,11 @@ new jKanban({
             'id' : '_inprogress',
             'title'  : 'In Progress',
             'class' : 'warning',
-            'item'  : taskListArray
+            'item'  : [
+                {
+                    'title': 'Hello!'
+                }
+            ]
         },
         {
             'id' : '_done',
@@ -54,4 +56,3 @@ new jKanban({
         }
     ]
 });
-}

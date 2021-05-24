@@ -1,7 +1,6 @@
 import Navigation from './components/navigation';
 import './components/tasklist';
 import './components/addButton';
-import './components/KanbanBoard';
 
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
@@ -28,10 +27,12 @@ var subNav = new Navigation(subLinks, subPages);
 subNav.links.forEach((link) => {
     link.addEventListener('click', function(){
         let pageId = subNav.getHash(link);
+        /*
         if(pageId == "page1-2") {
             console.log('kanban')
             initKanban(taskListArray);
         }
+        */
         subNav.setPage(pageId);
     })
 })

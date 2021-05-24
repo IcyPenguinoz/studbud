@@ -442,7 +442,7 @@ id) /*: string*/
 }
 
 },{}],"XIS29":[function(require,module,exports) {
-var KanbanTest = new jKanban({
+var kanban = new jKanban({
     element : '#myKanban',
     gutter  : '10px',
     responsivePercentage: true,
@@ -478,7 +478,11 @@ var KanbanTest = new jKanban({
             'id' : '_inprogress',
             'title'  : 'In Progress',
             'class' : 'warning',
-            'item'  : taskListArray
+            'item'  : [
+                {
+                    'title': 'Hello!'
+                }
+            ]
         },
         {
             'id' : '_done',

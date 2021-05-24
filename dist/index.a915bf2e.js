@@ -447,7 +447,6 @@ var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
 require('./components/tasklist');
 require('./components/addButton');
-require('./components/KanbanBoard');
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
 var nav = new _componentsNavigationDefault.default(links, pages);
@@ -466,15 +465,17 @@ var subNav = new _componentsNavigationDefault.default(subLinks, subPages);
 subNav.links.forEach(link => {
   link.addEventListener('click', function () {
     let pageId = subNav.getHash(link);
-    if (pageId == "page1-2") {
-      console.log('kanban');
-      initKanban(taskListArray);
+    /*
+    if(pageId == "page1-2") {
+    console.log('kanban')
+    initKanban(taskListArray);
     }
+    */
     subNav.setPage(pageId);
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/addButton":"1wlmT","./components/KanbanBoard":"XIS29"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/addButton":"1wlmT"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 class Navigation {
@@ -571,7 +572,7 @@ button.addEventListener("click", function(event){
 
 })
 
-// var taskListArray = [];
+var taskListArray = [];
 
 function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionTime, completionStatus) {
   let d = new Date();
@@ -652,64 +653,6 @@ BtnAdd.addEventListener("click", AddNew);
 function AddNew(){
     const newDiv = document.createElement("div");
     document.getElementById('task-box').appendChild(newDiv);
-}
-},{}],"XIS29":[function(require,module,exports) {
-function initKanban(){
-
-new jKanban({
-    element : '#myKanban',
-    gutter  : '10px',
-    responsivePercentage: true,
-    click : function(el){
-        alert(el.innerHTML);
-        alert(el.dataset.eid)
-    },
-    boards  :[
-        {
-            'id' : '_todo',
-            'title'  : 'To Do',
-            'class' : 'info',
-            'item'  : [
-                {
-                   'id':'task-1',
-                   /* Can use html semantic tags for title elements as seen below*/
-                   'title': `
-                   <h1> Hello! </h1>
-                   <p> Test Description </p>`,
-                   
-                },
-                {
-                   'id':'#task-2',
-                    'title':'Click me!!',
-                },
-                {
-                    'id': 'task-box',
-                    'title': 'test!',
-                }
-            ]
-        },
-        {
-            'id' : '_inprogress',
-            'title'  : 'In Progress',
-            'class' : 'warning',
-            'item'  : taskListArray
-        },
-        {
-            'id' : '_done',
-            'dragTo' : ['_working'],
-            'title'  : 'Done',
-            'class' : 'success',
-            'item'  : [
-                {
-                    'title':'Finish assignment',
-                },
-                {
-                    'title':'Ok!',
-                }
-            ]
-        }
-    ]
-});
 }
 },{}]},["4de8m","4B4Nd"], "4B4Nd", "parcelRequirec526")
 
