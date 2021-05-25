@@ -212,15 +212,54 @@
   flex-direction: row;
 }
 .task-list-boxes {
-  width: 30%;
+  position: relative;
+  width: 20%;
   height: 150px;
-  background-color: #123;
+  background-color: #1B2A41;
   color: white;
   margin-left: 10px;
-  padding-left: 10px;
+  padding-top: 2px;
 }
-.task-list-box h2 {
-  text-align: center;
+.task-list-boxes h2 {
+  font-size: 18px;
+  padding-left: 12px;
+}
+.task-list-boxes p {
+  font-size: 12px;
+  margin-top: 5px;
+  padding-left: 12px;
+}
+.task-list-boxes hr {
+  border: 0;
+  height: 2px;
+  background: white;
+}
+.task-list-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.done-button {
+  color: white;
+  border: none;
+  border-radius: 50px;
+  background-color: green;
+  height: 30px;
+  width: 30%;
+  margin-right: 25px;
+  font-weight: bold;
+  font-size: 0.9vw;
+}
+.not-done-button {
+  color: white;
+  border: none;
+  height: 30px;
+  width: 30%;
+  border-radius: 50px;
+  background-color: red;
+  font-weight: bold;
+  font-size: 0.9vw;
 }
 #task-box {
   display: flex;

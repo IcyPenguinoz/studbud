@@ -475,7 +475,7 @@ subNav.links.forEach(link => {
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/addButton":"1wlmT"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","./components/tasklist":"Rj9Cl","./components/addButton":"1wlmT","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 class Navigation {
@@ -600,31 +600,76 @@ function renderTask(task){
 
   // Create HTML elements
   //Find way to add all elements, e.g. task, due date, completion time etc to 1 task 
-  let item = document.createElement("li");
+ 
+ /* Then you'll need to add the element to the page */
+  let item = document.createElement("div");
+  
   item.classList.add("task-list-boxes");
   item.setAttribute('data-id', task.id);
-  item.innerHTML = "<h2>" + task.taskDescription + "</h2>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
+  item.innerHTML = "<h2>" + task.taskDescription + "</h2>" + "<hr>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
   + "<p>" + "Estimated Time: " + task.estimatedTime + " minutes" + "</p>" + "<p>" + "Priority Rating: " + task.priorityRating + "</p>";
   tasklist.appendChild(item);
 
 
 
   // Extra Task DOM elements 
-  let delButton = document.createElement("button");
-  let delButtonText = document.createTextNode("Delete Task");
-  delButton.appendChild(delButtonText);
-  item.appendChild(delButton);
 
 
-  //Event Listeners for DOM elements
-  delButton.addEventListener("click", function(event){
+  //Done Button
+  let doneButton = document.createElement("button");
+  doneButton.classList.add("done-button");
+  let doneButtonText = document.createTextNode("Done");
+  doneButton.appendChild(doneButtonText);
+
+  //Not Done Button
+  let notDoneButton = document.createElement("button");
+  notDoneButton.classList.add("not-done-button");
+  let notDoneText = document.createTextNode("Not Done");
+  notDoneButton.appendChild(notDoneText);
+
+  //button div container - to align positioning
+  let btnContainer = document.createElement("div");
+  btnContainer.classList.add("task-list-buttons");
+  btnContainer.appendChild(doneButton);
+  btnContainer.appendChild(notDoneButton);
+  //btnContainer.innerHTML = '<button class = "done-button"> Done </button>' + '<button class = "not-done-button"> Not Done </button>';
+  item.appendChild(btnContainer);
+
+  //Problem is that its not appending the individual buttons to item
+  //Could do appendChild to btnContainer --> appendChild worked
+
+  
+
+  
+
+
+
+
+  //Event Listeners for DOM elements; current problem is that only done/not done button works for 1st div box, doesn't work for others
+  //It also gets rid of all div elements 
+  doneButton.addEventListener("click", function(event){
     event.preventDefault();
     let id = event.target.parentElement.getAttribute('data-id');
     let index = taskListArray.findIndex(task => task.id === Number(id));
     removeItemFromArray(taskListArray, index);
     updateEmpty();
     item.remove();
+    //Add function where if it is done - the header element from the textbox which is clicked on - will be added to Kanban Board 
+    //"done section" 
   })
+
+
+  notDoneButton.addEventListener("click", function(event){
+    event.preventDefault();
+    let id = event.target.parentElement.getAttribute('data-id');
+    let index = taskListArray.findIndex(task => task.id === Number(id));
+    removeItemFromArray(taskListArray, index);
+    updateEmpty();
+    item.remove();
+    //Add function where if it is done - the header element from the textbox which is clicked on - will be added to Kanban Board 
+    //"done section" 
+  })
+
 
   // Clear the input form 
   form.reset();
