@@ -564,12 +564,13 @@
   width: 30%;
   height: 100%;
   left: 70%;
-  padding-left: 10px;
-  font-size: 30px;
+  padding-left: 5px;
+  font-size: 1.953125vw;
   background-image: linear-gradient(to bottom right, #51d183, #60b5d4);
   box-shadow: 0 0 20px 0px rgba(46, 196, 182, 0.16);
   color: white;
   cursor: pointer;
+  text-align: center;
 }
 .acronym-bottom-text {
   position: absolute;
