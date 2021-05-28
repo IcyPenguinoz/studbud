@@ -9,6 +9,8 @@ var completionTimeInput = document.getElementById("completionTimeInput");
 var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
+var taskListArray = JSON.parse(localStorage.getItem('tasks'));
+
 button.addEventListener("click", function(event){
   event.preventDefault();
   let task = taskInput.value;
@@ -20,14 +22,12 @@ button.addEventListener("click", function(event){
 
 })
 
-var taskListArray = [];
-
 function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionTime, completionStatus) {
   let d = new Date();
   let dateCreated = d.getFullYear(); 
   let task = {
     id: Date.now(), 
-    taskDescription,
+    title: taskDescription,
     dueDate,
     dateCreated,
     priorityRating,
@@ -35,15 +35,24 @@ function addTask(taskDescription, dueDate, priorityRating, estimatedTime, comple
     completionTime,
     completionStatus
   };
+  
+  //Code for local storage setting it inside Kanban
+  taskListArray = JSON.parse(localStorage.getItem('tasks'));
+  if (!taskListArray) {
+    taskListArray = [];
+  }
+  console.log(taskListArray)
   taskListArray.push(task);
-  console.log(taskListArray);
+  localStorage.setItem('tasks', JSON.stringify(taskListArray));
+  kanban.addElement('_todo', task)
+  console.log(kanban)
   renderTask(task);
   
 }
 
 
 function renderTask(task){
-
+  //if tasklist array is not empty; loop thorugh each task thats in there and populate inside item area
   updateEmpty();
 
   // Create HTML elements
@@ -54,7 +63,7 @@ function renderTask(task){
   
   item.classList.add("task-list-boxes");
   item.setAttribute('data-id', task.id);
-  item.innerHTML = "<h2>" + task.taskDescription + "</h2>" + "<hr>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
+  item.innerHTML = "<h2>" + task.title + "</h2>" + "<hr>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
   + "<p>" + "Estimated Time: " + task.estimatedTime + " minutes" + "</p>" + "<p>" + "Priority Rating: " + task.priorityRating + "</p>";
   tasklist.appendChild(item);
 
@@ -132,9 +141,54 @@ function removeItemFromArray(arr, index){
 }
 
 function updateEmpty(){
+  let taskListArray = JSON.parse(localStorage.getItem('tasks'));
   if (taskListArray.length > 0){
     document.getElementById('emptylist').style.display = 'none';
   } else {
     document.getElementById('emptylist').style.display = 'block';
   }
 }
+
+//Kanban initalised after alongside defined
+
+var kanban = new jKanban({  
+    element : '#myKanban',
+    gutter  : '10px',
+    responsivePercentage: true,
+    click : function(el){
+        alert(el.innerHTML);
+        alert(el.dataset.eid)
+    },
+    boards  :[
+        {
+            'id' : '_todo',
+            'title'  : 'To Do',
+            'class' : 'info',
+            'item'  : taskListArray
+        },
+        {
+            'id' : '_inprogress',
+            'title'  : 'In Progress',
+            'class' : 'warning',
+            'item'  : [
+                {
+                    'title': 'Hello!'
+                }
+            ]
+        },
+        {
+            'id' : '_done',
+            'dragTo' : ['_working'],
+            'title'  : 'Done',
+            'class' : 'success',
+            'item'  : [
+                {
+                    'title':'Finish assignment',
+                },
+                {
+                    'title':'Ok!',
+                }
+            ]
+        }
+    ]
+});
