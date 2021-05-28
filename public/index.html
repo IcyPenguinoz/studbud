@@ -151,7 +151,8 @@
             <div id = "page1-2" class = "sub-page-container" style = "display: none;"> 
                 <div id="myKanban">
                 </div>
-                <!--Incorporation of jKanban element-->
+                <!--Incorporation of jKanban element, NOTE: With new code - it recognises this as Kanban is defined
+                inside tasklist.js which is defined inside scripts.js-->
                 <script src="components/KanbanBoard.js"></script>
                 <div class = "add-Button">
                     <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
@@ -259,23 +260,26 @@
             </nav>
             <br>
             <div id = "page3-1" class = "sub-page-container"> 
-                <div class = "acronym-text">
-                    <p> Enter in at least 3 words - followed by a space! For example: cat dog chicken.</p>
-                </div>
-                <div class = "acronym-box">
-                    <div class = "acronym-box-text">
-                        <p> Enter your words here</p>
+                <div class = "acronym-container">
+                    <div class = "acronym-text">
+                        <p> Enter in at least 3 words - followed by a space! For example: cat dog chicken.</p>
                     </div>
-                    <div class = "acronym-generate-button">
-                        <h2> Generate</h2>
+                    <div class = "acronym-box">
+                        <div class = "acronym-box-text">
+                            <input class = "inputField" type = "text">
+                            <button class = "generate"> Generate </button>
+                        </div>
+                        <div class = "acronym-generate-button">
+                        </div>
                     </div>
+                    <div class = "acronym-bottom-text">
+                        <p>Then click generate to generate your acronym!</p>
+                    </div>
+            
                 </div>
-                <div class = "acronym-bottom-text">
-                    <p>Then click generate to generate your acronym!</p>
+                <div id = "page3-2" class = "sub-page-container" style = "display: none;">
+                    <h1> Acronym Viewer</h1>
                 </div>
-            </div>
-            <div id = "page3-2" class = "sub-page-container" style = "display: none;">
-                <h1> Acronym Viewer</h1>
             </div>
         </div>
     </div>
@@ -293,13 +297,13 @@
                 <br>
                 <h2> Description 5</h2>
             <div class = "iframe-container">
-                <iframe class = "responsive-iframe" src="https://www.youtube.com/embed/9FvvbVI5rYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
 
     </div>
 
-
+    <script src="js/localDataStorage-1.3.0.trim.js"></script>
     <script src = "scripts.js"></script>
 </body>
 

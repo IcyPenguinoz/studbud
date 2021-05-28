@@ -489,6 +489,7 @@
 #myKanban{
     padding-right: 10px;
     text-align: center;
+    font-size: 1vw;
 }
 
 .success{background: #00B961; color:#fff}
@@ -614,17 +615,22 @@
 }
 
 .acronym-container{
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 
 .acronym-text{
+    margin-top: 15px;
+    position: absolute;
     text-align: center;
 }
 
-
-.acronym-box{
+.acronym-box-text{
     position: absolute;
     display: flex; 
     justify-content: center;
@@ -632,18 +638,52 @@
     left:50%;
     top:45%;
     bottom: 100%;
-    width: 80%;
+    width: 60%;
     height: 10%;
     transform: translate(-50%,-50%);
-    color: white;
     background-image: linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1));
     box-shadow: 0 0 20px 0px rgba(46,196,182,0.16);
+    color: white;
     padding: 15px;
-    margin: 40px 2px;
+    margin: 50px 2px;
     cursor: pointer;
     font-weight: bold;
 
+}
 
+.inputField{
+    border-style: none;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    right: 30%;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.generate{
+    border-style: none;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 70%;
+    padding-left: 10px;
+    font-size: 30px;
+    background-image: linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1));
+    box-shadow: 0 0 20px 0px rgba(46,196,182,0.16);
+    color: white;
+    cursor: pointer;
+}
+
+.acronym-bottom-text{
+    position: absolute;
+    text-align: center;
+    left:50%;
+    top:85%;
+    bottom: 100%;
+    width: 80%;
+    height: 10%;
+    transform: translate(-50%,-50%);
 }
 
 
