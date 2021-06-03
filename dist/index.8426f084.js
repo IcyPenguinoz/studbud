@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"4de8m":[function(require,module,exports) {
+})({"27zHU":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "70dca43e1ee77af44d4d7940a915bf2e";
+module.bundle.HMR_BUNDLE_ID = "c5b1198021221cf77043d1a18426f084";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -441,320 +441,40 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"4B4Nd":[function(require,module,exports) {
-var _componentsNavigation = require('./components/navigation');
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
-require('./components/tasklist');
-require('./components/addButton');
-const links = document.querySelectorAll('.top-nav > ul > li > a');
-const pages = document.querySelectorAll('.page-container');
-var nav = new _componentsNavigationDefault.default(links, pages);
-nav.getLinks();
-nav.links.forEach(function (link) {
-  link.addEventListener('click', function () {
-    let pageId = nav.getHash(link);
-    nav.setPage(pageId);
-  });
-});
-var taskListArray = [];
-console.log(taskListArray);
-const subLinks = document.querySelectorAll('.sub-nav > ul > li > a');
-const subPages = document.querySelectorAll('.sub-page-container');
-var subNav = new _componentsNavigationDefault.default(subLinks, subPages);
-subNav.links.forEach(link => {
-  link.addEventListener('click', function () {
-    let pageId = subNav.getHash(link);
-    /*
-    if(pageId == "page1-2") {
-    console.log('kanban')
-    initKanban(taskListArray);
-    }
-    */
-    subNav.setPage(pageId);
-  });
+},{}],"4QyTw":[function(require,module,exports) {
+var words = document.getElementById("inputField").value.split(" ");
+var acronym = "";
+for (var i = 0; i < words.length; i += 1) {
+    acronym += words[i].charAt(0).toUpperCase();
+}
+var report = function() {
+    document.getElementById("result").innerHTML = acronym;
+};
+$('#generate').click(function(){
+    var myVar = $('#inputField').val();
+
+    var words = myVar.split(" ");
+    var acronym = words.map(function(word) {
+    return word.charAt(0).toUpperCase();
+    }).join('');
+    $("#result").html(acronym); //acronym is variable which should be shown on head/title of div card
+
+    console.log(acronym);
 });
 
-},{"./components/navigation":"2K1cj","./components/tasklist":"Rj9Cl","./components/addButton":"1wlmT","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2K1cj":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-class Navigation {
-  constructor(links, pages) {
-    this.links = links;
-    this.pages = pages;
-    this.currentPage = null;
-  }
-  getLinks() {
-    console.log(this.links);
-  }
-  setPage(pageId) {
-    this.currentPage = pageId;
-    console.log(this.currentPage);
-    this.links.forEach(link => {
-      link.classList.remove('active');
-      if (this.getHash(link) === pageId) {
-        link.classList.add('active');
-      }
-    });
-    this.pages.forEach(page => {
-      page.style.display = 'none';
-    });
-    document.getElementById(pageId).style.display = "block";
-  }
-  getHash(link) {
-    return link.href.split("#")[1];
-  }
-}
-exports.default = Navigation;
 
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
-"use strict";
-
-exports.interopDefault = function (a) {
-  return a && a.__esModule ? a : {
-    default: a
-  };
-};
-
-exports.defineInteropFlag = function (a) {
-  Object.defineProperty(a, '__esModule', {
-    value: true
-  });
-};
-
-exports.exportAll = function (source, dest) {
-  Object.keys(source).forEach(function (key) {
-    if (key === 'default' || key === '__esModule') {
-      return;
-    } // Skip duplicate re-exports when they have the same value.
-
-
-    if (key in dest && dest[key] === source[key]) {
-      return;
-    }
-
-    Object.defineProperty(dest, key, {
-      enumerable: true,
-      get: function () {
-        return source[key];
-      }
-    });
-  });
-  return dest;
-};
-
-exports.export = function (dest, destName, get) {
-  Object.defineProperty(dest, destName, {
-    enumerable: true,
-    get: get
-  });
-};
-},{}],"Rj9Cl":[function(require,module,exports) {
-const form = document.getElementById("taskform")
-const button = document.querySelector("#taskform > button")
-var taskInput = document.getElementById("taskInput");
-/* Added a > div to direct the tasklist inside div container - for flexbox element*/
-var tasklist = document.querySelector("#tasklist > ul > div");
-
-var dueDateInput = document.getElementById("dueDateInput");
-var completionTimeInput = document.getElementById("completionTimeInput");
-var estimatedTimeInput = document.getElementById("estimatedTimeInput");
-var priorityInput = document.getElementById("priorityInput");
-
-var taskListArray = JSON.parse(localStorage.getItem('tasks'));
-
-button.addEventListener("click", function(event){
-  event.preventDefault();
-  let task = taskInput.value;
-  let dueDate = dueDateInput.value;
-  let completionTime = completionTimeInput.value;
-  let estimatedTime = estimatedTimeInput.value;
-  let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
-  addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
-
-})
-
-function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionTime, completionStatus) {
-  let d = new Date();
-  let dateCreated = d.getFullYear(); 
-  let task = {
-    id: Date.now(), 
-    title: taskDescription,
-    dueDate,
-    dateCreated,
-    priorityRating,
-    estimatedTime,
-    completionTime,
-    completionStatus
-  };
+/*
+let item = document.createElement("div");
   
-  //Code for local storage setting it inside Kanban
-  taskListArray = JSON.parse(localStorage.getItem('tasks'));
-  if (!taskListArray) {
-    taskListArray = [];
-  }
-  console.log(taskListArray)
-  taskListArray.push(task);
-  localStorage.setItem('tasks', JSON.stringify(taskListArray));
-  kanban.addElement('_todo', task)
-  console.log(kanban)
-  renderTask(task);
-  
-}
+item.classList.add("task-list-boxes");
+item.setAttribute('data-id', task.id);
+item.innerHTML = "<h2>" + task.title + "</h2>" + "<hr>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
++ "<p>" + "Estimated Time: " + task.estimatedTime + " minutes" + "</p>" + "<p>" + "Priority Rating: " + task.priorityRating + "</p>";
+tasklist.appendChild(item);
 
+Can incorporate something like the above for acroynm maker
 
-function renderTask(task){
-  //if tasklist array is not empty; loop thorugh each task thats in there and populate inside item area
-  updateEmpty();
+*/ 
+},{}]},["27zHU","4QyTw"], "4QyTw", "parcelRequirec526")
 
-  // Create HTML elements
-  //Find way to add all elements, e.g. task, due date, completion time etc to 1 task 
- 
- /* Then you'll need to add the element to the page */
-  let item = document.createElement("div");
-  
-  item.classList.add("task-list-boxes");
-  item.setAttribute('data-id', task.id);
-  item.innerHTML = "<h2>" + task.title + "</h2>" + "<hr>" + "<p>" + "Due Date: " + task.dueDate + "</p>" + "<p>" + "Completion Time: " + task.completionTime  + "</p>" 
-  + "<p>" + "Estimated Time: " + task.estimatedTime + " minutes" + "</p>" + "<p>" + "Priority Rating: " + task.priorityRating + "</p>";
-  tasklist.appendChild(item);
-
-
-
-  // Extra Task DOM elements 
-
-
-  //Done Button
-  let doneButton = document.createElement("button");
-  doneButton.classList.add("done-button");
-  let doneButtonText = document.createTextNode("Done");
-  doneButton.appendChild(doneButtonText);
-  kanban.addElement('_inprogress', task)
-  //Need to use whereby if the button is clicked for done - it will only be that task in there and not inside to do
-
-  //Not Done Button
-  let notDoneButton = document.createElement("button");
-  notDoneButton.classList.add("not-done-button");
-  let notDoneText = document.createTextNode("Not Done");
-  notDoneButton.appendChild(notDoneText);
-
-  //button div container - to align positioning
-  let btnContainer = document.createElement("div");
-  btnContainer.classList.add("task-list-buttons");
-  btnContainer.appendChild(doneButton);
-  btnContainer.appendChild(notDoneButton);
-  //btnContainer.innerHTML = '<button class = "done-button"> Done </button>' + '<button class = "not-done-button"> Not Done </button>';
-  item.appendChild(btnContainer);
-
-  //Problem is that its not appending the individual buttons to item
-  //Could do appendChild to btnContainer --> appendChild worked
-
-  
-
-  
-
-
-
-
-  //Event Listeners for DOM elements; current problem is that only done/not done button works for 1st div box, doesn't work for others
-  //It also gets rid of all div elements 
-  doneButton.addEventListener("click", function(event){
-    event.preventDefault();
-    let id = event.target.parentElement.getAttribute('data-id');
-    let index = taskListArray.findIndex(task => task.id === Number(id));
-    removeItemFromArray(taskListArray, index);
-    updateEmpty();
-    item.remove();
-    //Add function where if it is done - the header element from the textbox which is clicked on - will be added to Kanban Board 
-    //"done section" 
-  })
-
-
-  notDoneButton.addEventListener("click", function(event){
-    event.preventDefault();
-    let id = event.target.parentElement.getAttribute('data-id');
-    let index = taskListArray.findIndex(task => task.id === Number(id));
-    removeItemFromArray(taskListArray, index);
-    updateEmpty();
-    item.remove();
-    //Add function where if it is done - the header element from the textbox which is clicked on - will be added to Kanban Board 
-    //"done section" 
-  })
-
-
-  // Clear the input form 
-  form.reset();
-}
-
-
-function removeItemFromArray(arr, index){
-  if (index > -1){
-    arr.splice(index, 1);
-  }
-  return arr;
-}
-
-function updateEmpty(){
-  let taskListArray = JSON.parse(localStorage.getItem('tasks'));
-  if (taskListArray.length > 0){
-    document.getElementById('emptylist').style.display = 'none';
-  } else {
-    document.getElementById('emptylist').style.display = 'block';
-  }
-}
-
-//Kanban initalised after alongside defined
-
-var kanban = new jKanban({  
-    element : '#myKanban',
-    gutter  : '10px',
-    responsivePercentage: true,
-    click : function(el){
-        alert(el.innerHTML);
-        alert(el.dataset.eid)
-    },
-    boards  :[
-        {
-            'id' : '_todo',
-            'title'  : 'To Do',
-            'class' : 'info',
-            'item'  : taskListArray
-        },
-        {
-            'id' : '_inprogress',
-            'title'  : 'In Progress',
-            'class' : 'warning',
-            'item'  : [
-                {
-                    'title': 'Hello!'
-                }
-            ]
-        },
-        {
-            'id' : '_done',
-            'dragTo' : ['_working'],
-            'title'  : 'Done',
-            'class' : 'success',
-            'item'  : [
-                {
-                    'title':'Finish assignment',
-                },
-                {
-                    'title':'Ok!',
-                }
-            ]
-        }
-    ]
-});
-},{}],"1wlmT":[function(require,module,exports) {
-const BtnAdd = document.querySelector(".buttonTag");
-
-BtnAdd.addEventListener("click", AddNew);
-
-function AddNew(){
-    const newDiv = document.createElement("div");
-    document.getElementById('task-box').appendChild(newDiv);
-}
-},{}]},["4de8m","4B4Nd"], "4B4Nd", "parcelRequirec526")
-
-//# sourceMappingURL=index.a915bf2e.js.map
+//# sourceMappingURL=index.8426f084.js.map

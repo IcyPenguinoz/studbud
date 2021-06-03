@@ -156,6 +156,7 @@
   background: #f9f9f9;
   border-radius: 50px;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .sub-nav {
   width: 100%;
@@ -302,7 +303,7 @@
   justify-content: center;
   align-items: center;
   left: 50%;
-  top: 45%;
+  top: 42.5%;
   bottom: 100%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -348,7 +349,7 @@
   align-items: center;
   width: 55%;
   height: 25%;
-  bottom: 2%;
+  bottom: 7%;
   left: 22.5%;
   text-align: center;
 }
@@ -363,6 +364,9 @@
   width: 50%;
   padding: 20px;
   cursor: pointer;
+}
+.start-button:hover {
+  background-image: linear-gradient(to bottom right, #51d183, #60b5d4);
 }
 .reset-button {
   border: none;
@@ -388,9 +392,6 @@
   padding: 20px;
   cursor: pointer;
 }
-/* 
-    Ask about how to place text under numbers 
-*/
 .timer-buttons div {
   float: left;
   text-align: center;
@@ -518,6 +519,14 @@
   width: 30%;
   font-size: 40px;
 }
+.vertical-line {
+  border-left: 5px solid black;
+  height: 410px;
+  position: relative;
+  float: right;
+  bottom: 61px;
+  right: 35%;
+}
 .acronym-container {
   display: flex;
   flex-direction: column;
@@ -576,11 +585,14 @@
   position: absolute;
   text-align: center;
   left: 50%;
-  top: 85%;
+  top: 75%;
   bottom: 100%;
   width: 80%;
   height: 10%;
   transform: translate(-50%, -50%);
+}
+#result {
+  font-size: 30px;
 }
 .responsive-iframe {
   position: absolute;
