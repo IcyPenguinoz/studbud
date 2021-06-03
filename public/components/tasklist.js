@@ -77,6 +77,8 @@ function renderTask(task){
   doneButton.classList.add("done-button");
   let doneButtonText = document.createTextNode("Done");
   doneButton.appendChild(doneButtonText);
+  kanban.addElement('_inprogress', task)
+  //Need to use whereby if the button is clicked for done - it will only be that task in there and not inside to do
 
   //Not Done Button
   let notDoneButton = document.createElement("button");
