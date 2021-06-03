@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="jkanban/dist/jkanban.min.css"> 
     <script src="jkanban/dist/jkanban.min.js"></script>
     <link href = "./scss/main.scss" rel = "stylesheet" type = "text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body class = "app-container">
@@ -105,7 +106,12 @@
                     </div>
                 </ul>
 
-                  
+                             
+                <div class = "add-Button" style = "display: none;">
+                    <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
+                 </div>
+
+
                 </div>
                  <div id = "task-grid">
                     <form id = "taskform">
@@ -138,10 +144,12 @@
                           <option value = "Medium"> Medium </option>
                           <option value = "High"> High </option>
                         </select>
-                  
-                  
+                        
+                        <br>
+                        <br>
+                        
                         <!-- Submit Button -->
-                        <button type = "submit"> Submit </button> 
+                        <button class = "submitbutton" type = "submit" > Submit </button> 
                 
                         
                       </form>
@@ -266,15 +274,17 @@
                     </div>
                     <div class = "acronym-box">
                         <div class = "acronym-box-text">
-                            <input class = "inputField" type = "text">
-                            <button class = "generate"> Generate </button>
+                            <input id = "inputField" type = "text">
+                            <button id = "generate"> Generate </button>
                         </div>
                         <div class = "acronym-generate-button">
                         </div>
                     </div>
                     <div class = "acronym-bottom-text">
                         <p>Then click generate to generate your acronym!</p>
+                        <p id = "result"> </p>
                     </div>
+                    
             
                 </div>
                 <div id = "page3-2" class = "sub-page-container" style = "display: none;">

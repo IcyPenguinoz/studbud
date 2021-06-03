@@ -2,20 +2,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "taskform tasklist";
+    grid-template-areas: "tasklist taskform";
 }
 
-#taskform{
+#taskform{ //how to make taskform just stay on right side of the screen alongside proper spacing between labels?
+    position: relative;
     grid-area: taskform;
-    max-width: 300px;
+    float: right;
+    max-width: 300px;   
     margin: 0 auto;
+    bottom: 25%;
     label{
-        margin-bottom: 10px;
-        display: block;
+        margin-bottom: 5px;
+        display: block; //This is what makes the labels go under the title 
         width: 100%;
     }
 }
 
 #tasklist{
     grid-area: tasklist;
+}
+
+button.submitbutton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
 }

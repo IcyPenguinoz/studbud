@@ -549,7 +549,7 @@
   cursor: pointer;
   font-weight: bold;
 }
-.inputField {
+#inputField {
   border-style: none;
   position: absolute;
   width: 70%;
@@ -558,7 +558,7 @@
   padding-left: 10px;
   font-size: 30px;
 }
-.generate {
+#generate {
   border-style: none;
   position: absolute;
   width: 30%;
@@ -712,19 +712,35 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "taskform tasklist";
+  grid-template-areas: "tasklist taskform";
 }
 #taskform {
+  position: relative;
   grid-area: taskform;
+  float: right;
   max-width: 300px;
   margin: 0 auto;
+  bottom: 25%;
 }
 #taskform label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: block;
   width: 100%;
 }
 #tasklist {
   grid-area: tasklist;
+}
+button.submitbutton {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  height: 15%;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */
