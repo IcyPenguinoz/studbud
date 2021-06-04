@@ -44,7 +44,8 @@ function addTask(taskDescription, dueDate, priorityRating, estimatedTime, comple
   console.log(taskListArray)
   taskListArray.push(task);
   localStorage.setItem('tasks', JSON.stringify(taskListArray));
-  kanban.addElement('_todo', task)
+  kanban.addElement('_inprogress', task); //adds element to inProgress when entering new task  - shows it on Kanban Board
+  //This is because when adding a task it is in progress of either being done or not done depending on what the user picks
   console.log(kanban)
   renderTask(task);
   
@@ -77,14 +78,22 @@ function renderTask(task){
   doneButton.classList.add("done-button");
   let doneButtonText = document.createTextNode("Done");
   doneButton.appendChild(doneButtonText);
-  kanban.addElement('_inprogress', task)
+  doneButton.onclick = ("click", function(){
+    kanban.addElement('_done', task)
+    kanban.removeElement('_todo', task)
+  });
   //Need to use whereby if the button is clicked for done - it will only be that task in there and not inside to do
+  //Need to have if statements or conditions where if done button or not done button is clicked, it will move it 
+  //accordingly and remove it from inProgress section
 
   //Not Done Button
   let notDoneButton = document.createElement("button");
   notDoneButton.classList.add("not-done-button");
   let notDoneText = document.createTextNode("Not Done");
   notDoneButton.appendChild(notDoneText);
+  notDoneButton.onclick = ("click", function(){
+    kanban.addElement('_todo', task) 
+  });
 
   //button div container - to align positioning
   let btnContainer = document.createElement("div");
