@@ -358,10 +358,10 @@
   background-color: green;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   border-radius: 50px;
   height: 100%;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   cursor: pointer;
 }
@@ -373,10 +373,10 @@
   background-color: grey;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   border-radius: 50px;
   height: 100%;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   cursor: pointer;
 }
@@ -385,10 +385,10 @@
   background-color: red;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   border-radius: 50px;
   height: 100%;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   cursor: pointer;
 }
@@ -429,7 +429,7 @@
   justify-content: center;
   align-items: center;
   left: 30%;
-  top: 45%;
+  top: 42.5%;
   bottom: 100%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -473,7 +473,7 @@
   align-items: center;
   width: 55%;
   height: 25%;
-  bottom: 5%;
+  bottom: 7.5%;
   left: 2%;
   text-align: center;
 }
@@ -482,10 +482,10 @@
   background-color: green;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   border-radius: 50px;
   height: 100%;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   cursor: pointer;
 }
@@ -494,10 +494,10 @@
   background-color: grey;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   border-radius: 50px;
   height: 100%;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   cursor: pointer;
 }
@@ -506,10 +506,10 @@
   background-color: red;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   border-radius: 50px;
   height: 100%;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   cursor: pointer;
 }
@@ -524,8 +524,15 @@
   height: 410px;
   position: relative;
   float: right;
-  bottom: 61px;
+  bottom: 25px;
   right: 35%;
+}
+.pomodoro-sessions {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 8%;
+  float: right;
 }
 .acronym-container {
   display: flex;
@@ -533,6 +540,18 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+.pomodoro-done {
+  border-radius: 50px;
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 .acronym-text {
   margin-top: 15px;
