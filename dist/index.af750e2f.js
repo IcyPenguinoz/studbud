@@ -514,8 +514,6 @@ buttonReset.onclick = function(){
     appendSeconds.innerHTML = seconds;
     appendMilliseconds.innerHTML = milliseconds;
     appendMinutes.innerHTML = minutes;
-
-
 };
 },{}]},["cmMHG","4w2wn"], "4w2wn", "parcelRequirec526")
 
