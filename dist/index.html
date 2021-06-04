@@ -83,7 +83,7 @@
             </nav>
             <br>
             <div id="page1-1" class="sub-page-container"> 
-                <h2> Description1</h2>
+                <h2> Task Description </h2>
                 <div id="task-box" style="display: none;
 ">
                     <div> 
@@ -100,14 +100,14 @@
                  </div>
 
                  <div id="task-grid">
-                                        <!--Tasklist Display-->
-                <div id="tasklist">
-                    <p id="emptylist"> You have not added any tasks yet.</p>
-                    <br>
-                    <ul>
-                        <div class="task-list-box-container"> 
-                        </div>
-                    </ul>
+                    <!--Tasklist Display-->
+                    <div id="tasklist">
+                        <p id="emptylist"> You have not added any tasks yet. Enter your tasks on the form to the right --></p>
+                        <br>
+                        <ul>
+                            <div class="task-list-box-container"> 
+                            </div>
+                        </ul>
     
                                  
                     <div class="add-Button" style="display: none;
@@ -165,9 +165,9 @@
                 </div>
                 <!--Incorporation of jKanban element, NOTE: With new code - it recognises this as Kanban is defined
                 inside tasklist.js which is defined inside scripts.js-->
-                <script src="/index.53ebd473.js"></script>
+                <script src="/index.7b0b0e09.js"></script>
                 <div class="add-Button">
-                    <button class="buttonTag"><i class="fas fa-plus"></i></button>
+                    <button class="buttonTag" id="addDefault"><i class="fas fa-plus"></i></button>
                 </div>
             </div>
 
@@ -301,7 +301,7 @@
             <div id="page3-1" class="sub-page-container"> 
                 <div class="acronym-container">
                     <div class="acronym-text">
-                        <p> Enter in at least 3 words - followed by a space! For example: cat dog chicken.</p>
+                        <p> Enter in at least 3 words - seperated by a space! For example: cat dog chicken.</p>
                     </div>
                     <div class="acronym-box">
                         <div class="acronym-box-text">
@@ -316,13 +316,16 @@
                         <p id="result"> Your Acronym </p>
                     </div>
                     
-            
-                </div>
-                <div id="page3-2" class="sub-page-container" style="display: none;
-">
-                    <h1> Acronym Viewer</h1>
                 </div>
             </div>
+                <div id="page3-2" class="sub-page-container" style="display: none;
+">
+                    <h1 style="text-align: center
+"> Your Acronyms:</h1>
+                    <div id="acronymBoxContainer">
+
+                    </div>
+                </div>
         </div>
     </div>
 

@@ -14,10 +14,10 @@ $('#generate').click(function(){
     return word.charAt(0).toUpperCase();
     }).join('');
     $("#result").html(acronym); //acronym is variable which should be shown on head/title of div card
-
+    $("#acronymBoxContainer").append("<div class = task-list-boxes>" + "<h2>" + acronym + "</h2>" + "</div>"); //this appends new acronyms to div elements 
     console.log(acronym);
-});
 
+});
 
 /*
 let item = document.createElement("div");

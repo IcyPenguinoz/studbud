@@ -707,8 +707,8 @@ function updateEmpty(){
 
 var kanban = new jKanban({  
     element : '#myKanban',
-    gutter  : '10px',
-    responsivePercentage: true,
+    gutter  : '15px',
+    responsivePercentage: false,
     click : function(el){
         alert(el.innerHTML);
         alert(el.dataset.eid)
@@ -746,6 +746,27 @@ var kanban = new jKanban({
         }
     ]
 });
+
+var addBoardDefault = document.getElementById('addDefault'); //addButton to add extra kanban column
+addBoardDefault.addEventListener('click', function () {
+    kanban.addBoards(
+        [{
+            'id' : '_default',
+            'title'  : 'Default (Can\'t drop in Done)',
+            'dragTo':['_todo','_working'],
+            'class' : 'error',
+            'item'  : [
+                {
+                    'title':'Default Item',
+                },
+                {
+                    'title':'Default Item 2',
+                }
+            ]
+        }]
+    )
+});
+
 },{}],"1wlmT":[function(require,module,exports) {
 const BtnAdd = document.querySelector(".buttonTag");
 

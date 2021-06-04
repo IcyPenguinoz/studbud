@@ -209,7 +209,7 @@
   margin-left: 30px;
 }
 #tasklist {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .task-list-box-container {
   display: flex;
@@ -408,7 +408,10 @@
 #myKanban {
   padding-right: 10px;
   text-align: center;
-  font-size: 1vw;
+  overflow-x: scroll;
+  font-size: 16px;
+  height: 100%;
+  width: 99%;
 }
 .success {
   background: #00B961;
@@ -539,6 +542,10 @@
 .pomodoro-sessions h2 {
   padding-top: 20px;
 }
+.pomodoro-form input {
+  margin-left: 10px;
+  border-radius: 25px;
+}
 /*border-left: black solid 4px;
 padding-left: 2rem;
 position: absolute;
@@ -547,13 +554,6 @@ right: 0;
 width: 30%;
 top: 24%;
 */
-.acronym-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
 .pomodoro-done {
   border-radius: 50px;
   background-color: #4CAF50;
@@ -561,11 +561,20 @@ top: 24%;
   border: none;
   color: white;
   height: 15%;
-  width: 80%;
+  width: 90%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.acronym-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 .acronym-text {
   margin-top: 15px;
@@ -590,6 +599,15 @@ top: 24%;
   margin: 50px 2px;
   cursor: pointer;
   font-weight: bold;
+}
+#acronymBoxContainer {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+#acronymBoxContainer h2 {
+  text-align: center;
 }
 #inputField {
   border-style: none;
@@ -698,6 +716,14 @@ top: 24%;
 @media only screen and (max-width: 380px) {
   .top-nav .nav-links .nav-item a {
     padding: 2.8em 0;
+  }
+
+  .task-list-boxes {
+    min-width: 200px;
+  }
+
+  #myKanban {
+    width: 80%;
   }
 }
 @media only screen and (max-width: 340px) {
