@@ -70,6 +70,4 @@ buttonReset.onclick = function(){
     appendSeconds.innerHTML = seconds;
     appendMilliseconds.innerHTML = milliseconds;
     appendMinutes.innerHTML = minutes;
-
-
 };
