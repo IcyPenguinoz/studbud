@@ -408,7 +408,7 @@
 #myKanban {
   padding-right: 10px;
   text-align: center;
-  overflow-x: scroll;
+  overflow-x: auto;
   font-size: 16px;
   height: 100%;
   width: 99%;
@@ -537,7 +537,8 @@
   bottom: 0;
   right: 0;
   width: 30%;
-  top: 23%;
+  top: 22.5%;
+  overflow-x: scroll;
 }
 .pomodoro-sessions h2 {
   padding-top: 20px;
@@ -604,10 +605,12 @@ top: 24%;
   padding-top: 50px;
   display: flex;
   flex-direction: row;
+  width: 99%;
   overflow-x: auto;
 }
 #acronymBoxContainer h2 {
   text-align: center;
+  border-bottom: 3px solid white;
 }
 #inputField {
   border-style: none;
@@ -724,6 +727,7 @@ top: 24%;
 
   #myKanban {
     width: 80%;
+    height: 250px;
   }
 }
 @media only screen and (max-width: 340px) {
