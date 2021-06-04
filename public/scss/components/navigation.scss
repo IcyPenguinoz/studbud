@@ -616,23 +616,29 @@
     font-size: 40px;
 }
 
-.vertical-line{
-    border-left: 5px solid black;   
-    height: 410px;
-    position: relative;
-    float: right;   
-    bottom: 25px;
-    right: 35%;
-}
-
 .pomodoro-sessions{ //Currently not responsive - ask about how to make it proper 
     display: flex;
     flex-direction: column;
     position: relative;
     right: 8%;
     float: right;
+    border-left: black solid 4px;
+    padding-left: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    top: 23%;
 }
 
+/*border-left: black solid 4px;
+padding-left: 2rem;
+position: absolute;
+bottom: 0;
+right: 0;
+width: 30%;
+top: 24%;
+*/
 .acronym-container{
     display: flex;
     flex-direction: column;
