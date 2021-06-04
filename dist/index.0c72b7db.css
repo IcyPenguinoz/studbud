@@ -208,18 +208,21 @@
 .sub-page-container {
   margin-left: 30px;
 }
+#tasklist {
+  overflow-x: scroll;
+}
 .task-list-box-container {
   display: flex;
   flex-direction: row;
 }
 .task-list-boxes {
   position: relative;
-  width: 20%;
   height: 150px;
   background-color: #1B2A41;
   color: white;
   margin-left: 10px;
   padding-top: 2px;
+  min-width: 250px;
 }
 .task-list-boxes h2 {
   font-size: 18px;
@@ -533,6 +536,9 @@
   width: 30%;
   top: 23%;
 }
+.pomodoro-sessions h2 {
+  padding-top: 20px;
+}
 /*border-left: black solid 4px;
 padding-left: 2rem;
 position: absolute;
@@ -554,7 +560,8 @@ top: 24%;
   /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  height: 15%;
+  width: 80%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -758,7 +765,7 @@ top: 24%;
   float: right;
   max-width: 300px;
   margin: 0 auto;
-  bottom: 25%;
+  top: -30px;
 }
 #taskform label {
   margin-bottom: 5px;
