@@ -8,9 +8,9 @@
     <link rel = "stylesheet" href = "fontawesome/css/all.min.css">
     <link rel = "stylesheet" href = "fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="jkanban/dist/jkanban.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="jkanban/dist/jkanban.min.js"></script>
     <link href = "./scss/main.scss" rel = "stylesheet" type = "text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body class = "app-container">
@@ -223,11 +223,10 @@
                 <div id = "page2-2" class = "sub-page-container" style = "display: none;"> 
                     <div class = "pomodoro-timer-spacing">
                         <div class = "timer-rectangle2">
-                            <div class = "minutes">25</div>
-                            <div class = "minutes-dot">:</div>
-                            <div class = "seconds">00</div>
-                        </div>
+                            <div class = "minutes2" id = "time-text" > </div>
+                        </div> 
                     </div>
+
                     <div class = "timer2-buttons">
                         <div class = "start">
                             <button class = "start2-button"> Start </button>
@@ -239,30 +238,41 @@
                             <button class = "stop2-button">Stop  </button>
                         </div>
                     </div>
+
+                    <div class = "pomodoro-togglemode">
+                        <button id="workBtn">Work Mode </button>
+                        <button id="breakBtn">Break Time</button>
+                    </div>
+
+            
+
+                    
                     <div class = "pomodoro-sessions">
-                        <h2> Edit Pomodoro Sessions </h2> 
+                        <h2> Edit Pomodoro Sessions (in minutes): </h2> 
                         <br>
                         <form class = "pomodoro-form">
                             <div class = "pomodoro-label">
-                                <label for="fname">Pomodoro Time:</label>
-                                <input type="number" id="fname" name="fname"><br>
+                                <label for="fname">Pomodoro Time</label>
+                                <input type="text" id="workTime" name="fname"><br> <!--workTime set accordingly to pomodoro js file-->
                             </div>
 
                             <br>
 
                             <label for="lname">Short Break:</label>
-                            <input type="number" id="lname" name="lname" > <br>
+                            <input type="text" id= "breakTime" name="lname" > <br> <!--breakTime set accordingly to pomodoro js file-->
 
                             <br>
 
                             <label for="lname">Long Break:</label>
                             <input type="number" id="lname" name="lname"> <br>
-                            
+
+                            <br>
+
                         </form>
 
                         <br>
 
-                        <button class = "pomodoro-done"> Done </button> 
+                        <button type = "submit" id ="updateBtn"  class = "pomodoro-done"> Done </button> 
                     </div>
                     <!--Ask if for pomodoro session text, should use grid or just style it using CSS-->
                 </div>
@@ -335,11 +345,14 @@
                 <!-- Use of lofi playlist as a way to help during studying process - lofi music helps keep brain at focus-->
                 <div style="left: 0%; width: 100%; height: 80%; position: absolute;"><iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media"></iframe></div>
         </div>
+        
 
     </div>
 
     <script src = "scripts.js"></script>
     <script src = "components/acronymMaker.js"></script>
+    <script src = "components/pomodoro-timer.js"></script>
 </body>
+
 
 </html> 

@@ -451,8 +451,7 @@
 }
 .timer-rectangle2 div {
   color: white;
-  font-size: 5.2vw;
-  width: 15%;
+  font-size: 5.8vw;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -461,15 +460,28 @@
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  bottom: 25%;
-  font-size: 1.3vw;
-  width: 14.5%;
+  bottom: 18.5%;
+  font-size: 1.5vw;
+  width: 13.5%;
   text-align: center;
 }
-.timer-rectangle2 div.minutes:before {
+.timer-rectangle2 div:after {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 18.5%;
+  font-size: 1.5vw;
+  width: 52.5%;
+  text-align: center;
+}
+.timer-rectangle2 div.minutes2:before {
   content: "MINUTES";
 }
-.timer-rectangle2 div.seconds:before {
+.timer-rectangle2 div.minutes2:after {
+  content: "SECONDS";
+}
+.timer-rectangle2 div.seconds2:before {
   content: "SECONDS";
   margin-right: 10px;
 }
@@ -482,6 +494,42 @@
   height: 25%;
   bottom: 7.5%;
   left: 2%;
+  text-align: center;
+}
+.pomodoro-togglemode {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 0%;
+  top: 47.5%;
+  left: 58.5%;
+  text-align: center;
+}
+#workBtn {
+  border: none;
+  background-image: linear-gradient(to bottom right, #51d183, #60b5d4);
+  color: white;
+  width: 70%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  font-weight: bold;
+  height: 200px;
+  font-size: 15px;
+  text-align: center;
+}
+#breakBtn {
+  border: none;
+  background-image: linear-gradient(red, yellow);
+  color: white;
+  width: 70%;
+  padding: 20px 10px;
+  font-weight: bold;
+  height: 200px;
+  font-size: 15px;
   text-align: center;
 }
 .start2-button {
@@ -537,20 +585,22 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 30%;
+  width: 26.5%;
   top: 22.5%;
   overflow-x: scroll;
 }
 .pomodoro-sessions h2 {
   padding-top: 20px;
+  font-size: 17px;
 }
 .pomodoro-form input {
   margin-left: 10px;
   padding-left: 10px;
-  border-radius: 25px;
   height: 30px;
   width: 40%;
-  font-size: 15px;
+  font-size: 16px;
+  background-color: #d3d3d3;
+  border: none;
 }
 /*border-left: black solid 4px;
 padding-left: 2rem;

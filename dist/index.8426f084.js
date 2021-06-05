@@ -442,6 +442,8 @@ id) /*: string*/
 }
 
 },{}],"4QyTw":[function(require,module,exports) {
+//Code used from: https://stackoverflow.com/questions/33360298/javascript-taking-string-from-html-input-field-to-process-through-an-acronym-ge
+
 var words = document.getElementById("inputField").value.split(" ");
 var acronym = "";
 for (var i = 0; i < words.length; i += 1) {
@@ -459,6 +461,14 @@ $('#generate').click(function(){
     }).join('');
     $("#result").html(acronym); //acronym is variable which should be shown on head/title of div card
     $("#acronymBoxContainer").append("<div class = task-list-boxes>" + "<h2>" + acronym + "</h2>" + "<p>" + showWords + "</p>" + "</div>"); //this appends new acronyms to div elements 
+
+    /*
+        $('#acronymBoxContainer').empty();
+        str.forEach(function(a) {
+        $('#acronymBoxContainer').append('&nbsp;<span>' + a.slice(0, 1) + '</span>' + a.slice(1))
+    })
+    */
+
     console.log(acronym);
     console.log(myVar);
     console.log(showWords);

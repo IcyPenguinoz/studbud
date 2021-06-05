@@ -168,7 +168,7 @@ function updateEmpty(){
   }
 }
 
-//Kanban initalised after alongside defined
+//Kanban Board initalised after, alongside defined as well. 
 
 var kanban = new jKanban({  
     element : '#myKanban',
