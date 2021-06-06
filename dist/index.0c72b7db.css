@@ -858,7 +858,7 @@ top: 24%;
 }
 #task-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "tasklist taskform";
 }
@@ -868,7 +868,7 @@ top: 24%;
   float: right;
   max-width: 300px;
   margin: 0 auto;
-  top: -30px;
+  top: -45px;
 }
 #taskform label {
   margin-bottom: 5px;
@@ -883,12 +883,21 @@ button.submitbutton {
   /* Green */
   border: none;
   color: white;
-  height: 15%;
+  height: 12.5%;
   width: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
   font-weight: bold;
+}
+@media only screen and (max-width: 380px) {
+  #taskform {
+    display: none;
+  }
+
+  #task-grid {
+    grid-template-columns: 4fr 1fr;
+  }
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */

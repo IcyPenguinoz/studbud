@@ -1,6 +1,6 @@
 #task-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "tasklist taskform";
 }
@@ -11,7 +11,7 @@
     float: right;
     max-width: 300px;   
     margin: 0 auto;
-    top: -30px;
+    top: -45px;
     label{
         margin-bottom: 5px;
         display: block; //This is what makes the labels go under the title 
@@ -27,11 +27,20 @@ button.submitbutton{
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    height: 15%;
+    height: 12.5%;
     width: 100%;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block;  
     font-size: 18px;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 380px) {
+    #taskform{
+        display:none;
+    }
+    #task-grid{
+        grid-template-columns: 4fr 1fr;
+    }
 }
