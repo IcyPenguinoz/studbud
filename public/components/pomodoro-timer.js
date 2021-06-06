@@ -1,5 +1,6 @@
 //code used from: https://codepen.io/nickpalmer789/pen/WQNRWY
 //Need to have long break time after 4 cycles of 5 minute breaks then after long break - counter resets and it goes back to work mode
+//Need to find a seperate condition apart from just working and !working or try to find a way to work around it
 
 $(document).ready(function() {
         var breakTime = 300; //In seconds
