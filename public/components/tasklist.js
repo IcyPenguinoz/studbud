@@ -217,7 +217,6 @@ addBoardDefault.addEventListener('click', function () {
         [{
             'id' : '_default',
             'title'  : customColumnName.value, //this gets input from textbox and makes it as the Kanban column title
-            'dragTo':['_todo','_working'],
             'class' : 'error',
             'item'  : [
                 {

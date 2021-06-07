@@ -263,7 +263,8 @@
     background-color: #1B2A41;
     color: white;
     margin-left: 10px;
-    padding-top: 2px;
+    //padding-top: 2px;
+    border-radius: 10px;
     min-width: 250px;
 
 }
@@ -271,6 +272,7 @@
 .task-list-boxes h2{
     font-size: 18px;
     padding-left: 12px;
+    background-color: #1B2A41;
 }
 
 .task-list-boxes p{
@@ -806,6 +808,13 @@ top: 24%;
     text-align: center;
     border-bottom: 3px solid white;
     font-size: 25px;
+    background: #FF033E;
+}
+
+#acronymBoxContainer div{
+    height: 200px;
+    overflow-y: auto;
+    border-radius: 5px;
 }
 
 #acronymBoxContainer p{
@@ -820,6 +829,10 @@ top: 24%;
     right: 30%;
     padding-left: 10px;
     font-size: 30px;
+}
+
+.capitalize{
+    text-transform: capitalize;   
 }
 
 #generate{
@@ -924,7 +937,7 @@ top: 24%;
 
 @media only screen and (max-width: 768px) {
     .top-nav .nav-links .nav-item a{
-        padding: 3em 0;
+        padding: 3em 0; //adjust these padding values for proper nav bar responsiv
     }
     .button{
         padding: 10px 50px;
@@ -937,7 +950,7 @@ top: 24%;
 
 @media only screen and (max-width: 380px) {
     .top-nav .nav-links .nav-item a{
-        padding: 2.8em 0;
+        padding: 2.8em 0; 
     }
     .task-list-boxes{
         min-width: 200px;
