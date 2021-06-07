@@ -12,7 +12,7 @@ $(document).ready(function() {
         var working = true;
         var pause = true;
         var counter = 0;
-        var test = 0;
+        var test = 0; //testValue used to properly make the pomodoro timer work
         //var pomodoroLoop = 5;
     
         //Sound for timer ring 
@@ -35,13 +35,14 @@ $(document).ready(function() {
                 if (currentTime >= 1) {
                         currentTime--;
                         displayTime();
-                } else if (working && currentTime == 0 && counter < 4) { //This is what switc   hes the time - if currentTime = 0 and the person is working
+                } else if (working && currentTime == 0 && counter < 4) { //This is what switches the time - if currentTime = 0 and the person is working
                     //then switch to break-time
                         switchBreakTime(); //colours seemed inverse when swapping times
                 } else if (working && currentTime == 0 && counter == 4){ //otherwise keep working/stay on working - works when counter is set at 5 HOWEVER becomes stuck there
                         switchLongBreakTime(); //issue where it seems like background-color of longBreakTime is still same as gradient colur of shortBreakTime
                 } else{
                     switchWorkTime(); 
+                    console.log(working)
                 }
         }
     
@@ -68,7 +69,8 @@ $(document).ready(function() {
                 }else if (!working && test == 2){ //background colour for longBreak doesn't seem to work
                         $("longBreakBtn").removeClass("btn-danger").addClass("btn-default active");
                         $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
-                        $(".timer-rectangle2").css("background", "rgb(131,58,180)");
+                        $(".timer-rectangle2").css("background", "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)");
+                        
     
                 } else{
                     $("#workBtn").removeClass("btn-danger").addClass("btn-default active");

@@ -1,3 +1,7 @@
+//set a value whereby - if it is done it equals to 1, if it is not done it equals to 2 otherwise it is 3 
+//then afterwards when showing the title for Kanban Board, if the value = 1, show array data that has assigned value of 1 etc
+
+
 const form = document.getElementById("taskform")
 const button = document.querySelector("#taskform > button")
 var taskInput = document.getElementById("taskInput");
@@ -44,8 +48,7 @@ function addTask(taskDescription, dueDate, priorityRating, estimatedTime, comple
   console.log(taskListArray)
   taskListArray.push(task);
   localStorage.setItem('tasks', JSON.stringify(taskListArray));
-  kanban.addElement('_inprogress', task)
-   //adds element to inProgress when entering new task  - shows it on Kanban Board
+  //adds element to inProgress when entering new task  - shows it on Kanban Board
   //This is because when adding a task it is in progress of either being done or not done depending on what the user picks
   
 
@@ -75,7 +78,7 @@ function renderTask(task){
 
   // Extra Task DOM elements 
 
-
+  kanban.addElement('_inprogress', task);
 
 
   //Done Button
@@ -84,8 +87,8 @@ function renderTask(task){
   let doneButtonText = document.createTextNode("Done");
   doneButton.appendChild(doneButtonText);
   doneButton.onclick = ("click", function(){
-    kanban.removeElement('_inprogress', task);
     kanban.addElement('_done', task);
+    kanban.removeElement('_inprogress', task);
   });
   //Need to use whereby if the button is clicked for done - it will only be that task in there and not inside to do
   //Need to have if statements or conditions where if done button or not done button is clicked, it will move it 
@@ -97,8 +100,8 @@ function renderTask(task){
   let notDoneText = document.createTextNode("Not Done");
   notDoneButton.appendChild(notDoneText);
   notDoneButton.onclick = ("click", function(){
-    kanban.removeElement('_inprogress', task);
     kanban.addElement('_todo', task) 
+    kanban.removeElement('_inprogress', task);
   });
 
 
@@ -174,10 +177,6 @@ var kanban = new jKanban({
     element : '#myKanban',
     gutter  : '15px',
     responsivePercentage: false,
-    click : function(el){
-        alert(el.innerHTML);
-        alert(el.dataset.eid)
-    },
     boards  :[
         {
             'id' : '_todo',
@@ -195,9 +194,8 @@ var kanban = new jKanban({
                 }
             ]
         },
-        {
+        { 
             'id' : '_done',
-            'dragTo' : ['_working'],
             'title'  : 'Done',
             'class' : 'success',
             'item'  : [
