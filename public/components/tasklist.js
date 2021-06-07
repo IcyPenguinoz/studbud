@@ -14,6 +14,7 @@ var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
 var taskListArray = JSON.parse(localStorage.getItem('tasks'));
+var customColumnName = document.getElementById("kanbanColumnName");
 
 button.addEventListener("click", function(event){
   event.preventDefault();
@@ -215,7 +216,7 @@ addBoardDefault.addEventListener('click', function () {
     kanban.addBoards(
         [{
             'id' : '_default',
-            'title'  : 'Default (Can\'t drop in Done)',
+            'title'  : customColumnName.value, //this gets input from textbox and makes it as the Kanban column title
             'dragTo':['_todo','_working'],
             'class' : 'error',
             'item'  : [

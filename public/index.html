@@ -8,6 +8,7 @@
     <link rel = "stylesheet" href = "fontawesome/css/all.min.css">
     <link rel = "stylesheet" href = "fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="jkanban/dist/jkanban.min.css"> 
+    <link rel="shortcut icon" type="image/png" href="./img/favicon-32x32.png"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="jkanban/dist/jkanban.min.js"></script>
     <link href = "./scss/main.scss" rel = "stylesheet" type = "text/css">
@@ -165,6 +166,10 @@
                 inside tasklist.js which is defined inside scripts.js-->
                 <script src="components/addKanbanBoard.js"></script>
                 <div class = "add-Button">
+                    <form>
+                        <label for="fname">Add your own column name here!:</label><br>
+                        <input type="text" id="kanbanColumnName" name="fname"><br>
+                      </form>
                     <button class="buttonTag" id="addDefault"><i class = "fas fa-plus"></i></button>
                 </div>
             </div>
