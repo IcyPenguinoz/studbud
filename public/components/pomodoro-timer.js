@@ -1,6 +1,8 @@
 //code used from: https://codepen.io/nickpalmer789/pen/WQNRWY
 //Need to have long break time after 4 cycles of 5 minute breaks then after long break - counter resets and it goes back to work mode
-//Need to find a seperate condition apart from just working and !working or try to find a way to work around it
+//Need to find a seperate condition apart from just working and !working or try to find a way to work around it 
+//Added a seperate test value to properly ensure that based on test value - which is used to check buttton value - it will execute properly
+//Test value used and worked to properly fix issues with resetting time and switching   
 
 $(document).ready(function() {
         var breakTime = 300; //In seconds
@@ -10,6 +12,7 @@ $(document).ready(function() {
         var working = true;
         var pause = true;
         var counter = 0;
+        var test = 0;
         //var pomodoroLoop = 5;
     
         //Sound for timer ring 
@@ -32,11 +35,11 @@ $(document).ready(function() {
                 if (currentTime >= 1) {
                         currentTime--;
                         displayTime();
-                } else if (working && currentTime == 0 && counter < 4 ) { //This is what switches the time - if currentTime = 0 and the person is working
+                } else if (working && currentTime == 0 && counter < 4) { //This is what switc   hes the time - if currentTime = 0 and the person is working
                     //then switch to break-time
-                        switchBreakTime();
+                        switchBreakTime(); //colours seemed inverse when swapping times
                 } else if (working && currentTime == 0 && counter == 4){ //otherwise keep working/stay on working - works when counter is set at 5 HOWEVER becomes stuck there
-                        switchLongBreakTime();
+                        switchLongBreakTime(); //issue where it seems like background-color of longBreakTime is still same as gradient colur of shortBreakTime
                 } else{
                     switchWorkTime(); 
                 }
@@ -58,11 +61,11 @@ $(document).ready(function() {
     
         //Toggles the appearance of the buttons while not making it spamable - problem, background colour not changing
         function toggleButtons() {
-                if (!working) {
+                if (!working && test == 50) {
                         $("#workBtn").removeClass("btn-danger").addClass("btn-default active");
                         $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
                         $(".timer-rectangle2").css("background-image", "linear-gradient(red, yellow)");
-                }else if (working && !working){ //background colour for longBreak doesn't seem to work
+                }else if (!working && test == 2){ //background colour for longBreak doesn't seem to work
                         $("longBreakBtn").removeClass("btn-danger").addClass("btn-default active");
                         $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
                         $(".timer-rectangle2").css("background", "rgb(131,58,180)");
@@ -76,7 +79,7 @@ $(document).ready(function() {
     
         //Switches the current time to break time 
         function switchBreakTime() {
-                if (!working && counter < 5) {
+                if (!working &&  test == 2) {
                         return;
                 }
     
@@ -91,7 +94,7 @@ $(document).ready(function() {
     
         //switches from current time to long break time after 4 cycles  problem, not working when switching to short break time
         function switchLongBreakTime(){
-            if (!working && counter == 5) { //only seems to work when % pomodoroLoop === 0
+            if (!working && test == 50) { //only seems to work when % pomodoroLoop === 0
                     return;
             }
     
@@ -143,7 +146,10 @@ $(document).ready(function() {
                 if (working) {
                         working = false;
                         switchWorkTime();
-                } else {
+                } else if (!working && test == 2){
+                        working = true;
+                        switchLongBreakTime();
+                } else if (!working && test == 50){
                         working = true;
                         switchBreakTime();
                 }
@@ -160,12 +166,17 @@ $(document).ready(function() {
         $("#shortBreakBtn").on("click", function() {
                 /*$("#breakBtn").removeClass("btn-primary").addClass("btn-default active");
                 $("#workBtn").removeClass("btn-default active").addClass("btn-danger");*/
+                test = 50;
+                console.log(test);
                 switchBreakTime();
+        
         });
     
         $("#longBreakBtn").on("click", function() {
             /*$("#breakBtn").removeClass("btn-primary").addClass("btn-default active");
             $("#workBtn").removeClass("btn-default active").addClass("btn-danger");*/
+            test = 2;
+            console.log(test);
             switchLongBreakTime();
     });
     
