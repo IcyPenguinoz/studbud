@@ -523,6 +523,7 @@
   font-size: 15px;
   text-align: center;
   cursor: pointer;
+  border-radius: 20px;
 }
 #shortBreakBtn {
   border: none;
@@ -536,6 +537,7 @@
   font-size: 15px;
   text-align: center;
   cursor: pointer;
+  border-radius: 20px;
 }
 #longBreakBtn {
   border: none;
@@ -549,6 +551,7 @@
   font-size: 15px;
   text-align: center;
   cursor: pointer;
+  border-radius: 20px;
 }
 .start2-button {
   border: none;
