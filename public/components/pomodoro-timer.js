@@ -63,7 +63,7 @@ $(document).ready(function() {
         //Toggles the appearance of the buttons while not making it spamable - problem, background colour not changing
         function toggleButtons() {
                 if (!working && test == 50) {
-                        $("#workBtn").removeClass("btn-danger").addClass("btn-default active");
+        
                         $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
                         $(".timer-rectangle2").css("background-image", "linear-gradient(red, yellow)");
                 }else if (!working && test == 2){ //background colour for longBreak doesn't seem to work
