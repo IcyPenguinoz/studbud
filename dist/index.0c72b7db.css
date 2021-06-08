@@ -651,7 +651,7 @@ top: 24%;
   justify-content: space-between;
 }
 .acronym-text {
-  margin-top: 15px;
+  margin-top: 30px;
   position: absolute;
   text-align: center;
 }
@@ -802,6 +802,75 @@ top: 24%;
     white-space: nowrap;
   }
 }
+@media only screen and (max-width: 415px) {
+  .tabs {
+    height: 67vh;
+  }
+
+  #acronymBoxContainer {
+    width: 95%;
+  }
+
+  .acronym-title {
+    font-size: 20px;
+    margin: auto;
+    margin-right: 25px;
+  }
+
+  .top-text {
+    margin-bottom: -10px;
+  }
+
+  .top-text-title {
+    width: auto;
+    float: left;
+    /* width: 50%; */
+    text-align: center;
+    font-size: 2.17vw;
+  }
+
+  .top-text-middle-line {
+    border-left: 6px solid black;
+    margin: 0 auto;
+    width: auto;
+    height: 6.63vh;
+    text-align: center;
+  }
+
+  /*     background: linear-gradient(#000, #000) no-repeat center/6px 100%; */
+  .top-text-paragraph {
+    float: right;
+    font-size: 2vw;
+    /* width: 2%; */
+    /* flex-wrap: nowrap; */
+    text-align: center;
+    width: auto;
+  }
+
+  .sub-nav .nav-links .nav-item a {
+    padding: 6.6em 2.965em;
+    font-size: 1.83vw;
+  }
+
+  .acronym-text {
+    margin: auto;
+  }
+
+  #result {
+    display: none;
+  }
+
+  #inputField {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
+  #generate {
+    width: 40%;
+    padding-left: 5px;
+    font-size: 2.953125vw;
+  }
+}
 @media only screen and (max-width: 380px) {
   .top-nav .nav-links .nav-item a {
     padding: 2.8em 0;
@@ -865,7 +934,7 @@ top: 24%;
   }
 
   .sub-nav .nav-links .nav-item a {
-    padding: 4.5em 5em;
+    padding: 4.5em 1em;
     font-size: 9px;
   }
 }
