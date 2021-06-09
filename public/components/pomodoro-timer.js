@@ -144,6 +144,7 @@ $(document).ready(function() {
                 switchWorkTime();
                 console.log(workTime);
                 alert("Settings saved and added to timer modes!");
+                document.querySelector(".pomodoro-form").reset();
         });
     
         //Restart the timer - problem is also with reset - on long break time it resets to short break time 

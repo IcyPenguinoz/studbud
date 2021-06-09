@@ -811,6 +811,7 @@ addBoardDefault.addEventListener('click', function () {
         }]
     )
     alert("Added new column!");
+    document.querySelector("#addColumn").reset();
 });
 
 
