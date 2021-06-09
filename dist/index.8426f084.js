@@ -472,7 +472,7 @@ $('#generate').click(function(){
     return word.charAt(0).toUpperCase();
     }).join('');
     console.log(words);
-    $("#result").html(acronym); //acronym is variable which should be shown on head/title of div card
+    $("#result").html("Acronym generated! See it in \'Acronym Viewer\""); //acronym is variable which should be shown on head/title of div card
     $("#acronymBoxContainer").append("<div class = task-list-boxes>" + "<h2>" + acronym + "</h2>" + "<p>" + words.join(' ') + "</p>" + "</div>"); //this appends new acronyms to div elements 
     //can just add words.join(' ') to the div output which works
 

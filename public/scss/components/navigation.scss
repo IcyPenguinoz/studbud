@@ -378,7 +378,8 @@
     height: 150px;
     background-color: #1B2A41;
     color: white;
-    margin-left: 10px;
+    //margin-left: 10px;
+    margin-right: 10px;
     //padding-top: 2px;
     border-radius: 10px;
     min-width: 250px;
@@ -636,7 +637,7 @@
 }
 
 #myKanban{
-    padding-right: 10px;
+    //padding-right: 10px;
     text-align: center;
     overflow-x: auto;
     font-size: 16px;
@@ -1057,7 +1058,7 @@ top: 24%;
 }
 
 #result{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -1222,8 +1223,14 @@ top: 24%;
         min-width: 200px;
     }
     #myKanban{
-        width: 80%;
-        height: 250px;
+        width: 90%;
+        height: 210px;
+    }
+    .taskDescription{
+        font-size: 5vw;
+    }
+    #emptylist{
+        font-size: 4vw;
     }
 
 }
