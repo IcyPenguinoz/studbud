@@ -560,6 +560,13 @@ var taskInput = document.getElementById("taskInput");
 /* Added a > div to direct the tasklist inside div container - for flexbox element*/
 var tasklist = document.querySelector("#tasklist > ul > div");
 
+/*
+var homeLink = document.querySelector(".button").onclick = function() {
+  location.href = "http://localhost:1234/#page1";
+};
+
+*/
+
 var dueDateInput = document.getElementById("dueDateInput");
 var completionTimeInput = document.getElementById("completionTimeInput");
 var estimatedTimeInput = document.getElementById("estimatedTimeInput");
@@ -567,6 +574,7 @@ var priorityInput = document.getElementById("priorityInput");
 
 var taskListArray = JSON.parse(localStorage.getItem('tasks'));
 var customColumnName = document.getElementById("kanbanColumnName"); //gets value from columnName label input 
+
 
 button.addEventListener("click", function(event){
   event.preventDefault();
