@@ -12,7 +12,7 @@ $(document).ready(function() {
         var working = true;
         var pause = true;
         var counter = 0;
-        var test = 0; //testValue used to properly make the pomodoro timer work
+        var test = 0; //testValue used to properly make the pomodoro timer work - can perhaps change name to something better
         //var pomodoroLoop = 5;
     
         //Sound for timer ring 
@@ -37,8 +37,10 @@ $(document).ready(function() {
                         displayTime();
                 } else if (working && currentTime == 0 && counter < 4) { //This is what switches the time - if currentTime = 0 and the person is working
                     //then switch to break-time
-                        switchBreakTime(); //colours seemed inverse when swapping times
+                        test = 50; 
+                        switchBreakTime(); //colours fixed by dynamically changing value before it switches to be able to change colour 
                 } else if (working && currentTime == 0 && counter == 4){ //otherwise keep working/stay on working - works when counter is set at 5 HOWEVER becomes stuck there
+                        test = 2;
                         switchLongBreakTime(); //issue where it seems like background-color of longBreakTime is still same as gradient colur of shortBreakTime
                 } else{
                     switchWorkTime(); 

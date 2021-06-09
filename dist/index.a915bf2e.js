@@ -770,7 +770,7 @@ addBoardDefault.addEventListener('click', function () {
     kanban.addBoards(
         [{
             'id' : '_default',
-            'title'  : customColumnName.value, //this gets input from textbox and makes it as the Kanban column title
+            'title'  : customColumnName.value, //this gets input from form label textbox and makes it as the Kanban column title
             'class' : 'error',
             'item'  : [
                 {
@@ -783,6 +783,7 @@ addBoardDefault.addEventListener('click', function () {
         }]
     )
 });
+
 
 },{}],"1wlmT":[function(require,module,exports) {
 const BtnAdd = document.querySelector(".buttonTag");
