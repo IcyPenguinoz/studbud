@@ -114,6 +114,7 @@
                      <div class = "add-Button">
                         <button class = "buttonTag" id = "modal-btn"><i class = "fas fa-plus"></i></button>
                      </div>
+                     
     
     
                     </div>
@@ -155,7 +156,7 @@
                                 <br>
                                 
                                 <!-- Submit Button -->
-                                <button class = "submitbutton" type = "submit" > </i> Submit </button> 
+                                <button class = "submitbutton" type = "submit" > Submit </button> 
                         
                                 
                             </form>
@@ -173,12 +174,25 @@
                 inside tasklist.js which is defined inside scripts.js-->
                 <script src="components/addKanbanBoard.js"></script>
                 <div class = "add-Button">
-                    <form>
-                        <label for="fname">Add your own column name here!:</label><br>
-                        <input type="text" id="kanbanColumnName" name="fname"><br>
-                      </form>
-                    <button class="buttonTag" id="addDefault"><i class = "fas fa-plus"></i></button>
+                    <button class="buttonTag" id = "modal-btn2"><i class = "fas fa-plus"></i></button> <!--Button seems to open modal tab from 1st page-->
                 </div>
+
+                <div class = "modal-bg2">
+                    <div class = "modal2">
+                        <h3>Add your own custom columns here!</h3>
+                        <br>
+                        <form id = "addColumn">
+                            <label for = "columnName">Column Name:</label>
+                            <br>
+                            <input type = "text" id="kanbanColumnName">
+                            <br>
+                        </form>
+                        <button id= "addDefault" type = "submit">Submit</button> <!--Has to do with the button inside the form-->
+                        <i id = "modal-close2" class="far fa-window-close"></i>
+                            
+                    </div>
+                </div>
+                
             </div>
 
 

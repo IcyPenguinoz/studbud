@@ -67,6 +67,20 @@ button.submitbutton{
         border-radius: 0px;
         padding: 0;
     }
+
+    .modal2{ //Makes modal full screen on mobile
+        width: 90%;
+        height: 40%;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        border-radius: 0px;
+        padding: 0;
+        h3{
+            font-size: 4.5vw;
+            text-align: center;
+        }
+    }
     #task-grid{
         grid-template-columns: 4fr 1fr;
     }

@@ -14,7 +14,7 @@ var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
 var taskListArray = JSON.parse(localStorage.getItem('tasks'));
-var customColumnName = document.getElementById("kanbanColumnName");
+var customColumnName = document.getElementById("kanbanColumnName"); //gets value from columnName label input 
 
 button.addEventListener("click", function(event){
   event.preventDefault();
@@ -87,6 +87,8 @@ function renderTask(task){
   doneButton.classList.add("done-button");
   let doneButtonText = document.createTextNode("Done");
   doneButton.appendChild(doneButtonText);
+
+  
   doneButton.onclick = ("click", function(){
     kanban.addElement('_done', task);
     kanban.removeElement('_inprogress', task);
