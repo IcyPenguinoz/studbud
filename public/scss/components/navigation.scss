@@ -1148,6 +1148,10 @@ top: 24%;
         height: 63vh;
     }
 
+    #acronymBoxContainer{
+        padding-top: 20px;
+    }
+
     .timer-rectangle{
         width: 80%;
         height: 25%;
@@ -1334,6 +1338,9 @@ top: 24%;
 */
 
 @media only screen and (max-width: 380px) {
+    .timer-rectangle div{
+        font-size: 6.2vw;
+    }
     .top-nav .nav-links .nav-item a{
         padding: 2.8em 0; 
     }
@@ -1455,9 +1462,12 @@ top: 24%;
 
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 321px) {
     .sub-nav .nav-links .nav-item a{
         padding: 6.5em 0.965em;
+    }
+    #musicTitle{
+        font-size: 25px;
     }
 
 }

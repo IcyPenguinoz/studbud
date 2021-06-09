@@ -24,8 +24,36 @@ button.addEventListener("click", function(event){
   let estimatedTime = estimatedTimeInput.value;
   let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
   addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
+  /*
+  if (ValidateForm() == false){
+    addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
+  }
+  console.log(ValidateForm());
+  */
 
 })
+
+
+/*ValidateForm test 
+function ValidateForm() {
+
+  var formInvalid = false;
+  $('#taskform input').each(function() {
+    if ($(this).val() === '') {
+      formInvalid = true;
+    } else{
+      return false;
+    }
+  });
+
+  if (formInvalid)
+    alert('One or Two fields are empty. Please fill up all fields');
+  
+  
+  
+  
+}
+*/
 
 function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionTime, completionStatus) {
   let d = new Date();
@@ -230,5 +258,6 @@ addBoardDefault.addEventListener('click', function () {
             ]
         }]
     )
+    alert("Added new column!");
 });
 
