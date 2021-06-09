@@ -963,7 +963,117 @@ top: 24%;
 }
 @media only screen and (max-width: 415px) {
   .tabs {
-    height: 67vh;
+    height: 63vh;
+  }
+
+  .timer-rectangle {
+    width: 80%;
+    height: 25%;
+    margin: 15px 2px;
+    border-radius: 0px;
+  }
+
+  .timer-rectangle div {
+    font-size: 7.7vw;
+    width: 55%;
+    margin-bottom: 30px;
+  }
+
+  .timer-rectangle div:before {
+    bottom: 30%;
+    font-size: 2.1vw;
+    width: 17.5%;
+  }
+
+  .timer-buttons {
+    bottom: 10%;
+  }
+
+  .start-button {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .reset-button {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .stop-button {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .timer-rectangle2 {
+    left: 35%;
+    border-radius: 0px;
+  }
+
+  .timer-rectangle2 div {
+    font-size: 10.8vw;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .timer-rectangle2 div.minutes2:before {
+    content: none;
+  }
+
+  .timer-rectangle2 div.minutes2:after {
+    content: none;
+  }
+
+  .timer2-buttons {
+    width: 96%;
+    bottom: 8%;
+    left: 2%;
+  }
+
+  .start2-button {
+    font-size: 12px;
+    width: 100%;
+    padding: 8px;
+    height: 50px;
+  }
+
+  .reset2-button {
+    font-size: 12px;
+    width: 100%;
+    padding: 8px;
+    height: 50px;
+  }
+
+  .stop2-button {
+    font-size: 12px;
+    width: 100%;
+    padding: 8px;
+    height: 50px;
+  }
+
+  .pomodoro-togglemode {
+    top: 40%;
+    left: 79%;
+  }
+
+  #workBtn {
+    width: 60px;
+    padding: 10px 10px;
+    font-size: 10px;
+    border-radius: 0px;
+  }
+
+  #shortBreakBtn {
+    width: 60px;
+    padding: 10px 10px;
+    font-size: 10px;
+    border-radius: 0px;
+  }
+
+  #longBreakBtn {
+    width: 60px;
+    padding: 10px 10px;
+    font-size: 10px;
+    border-radius: 0px;
   }
 
   #acronymBoxContainer {
@@ -1007,7 +1117,7 @@ top: 24%;
   }
 
   .sub-nav .nav-links .nav-item a {
-    padding: 6.6em 2.965em;
+    padding: 6.5em 2.965em;
     font-size: 1.83vw;
   }
 
@@ -1030,6 +1140,13 @@ top: 24%;
     font-size: 2.953125vw;
   }
 }
+/*
+@media only screen and (max-height: 812px){
+    #myKanban{
+        height: 300px;
+    }
+}
+*/
 @media only screen and (max-width: 380px) {
   .top-nav .nav-links .nav-item a {
     padding: 2.8em 0;
@@ -1039,20 +1156,59 @@ top: 24%;
     min-width: 200px;
   }
 
+  .acronym-text {
+    font-size: 13px;
+  }
+
+  .acronym-title {
+    font-size: 13px;
+  }
+
   #myKanban {
     width: 90%;
     height: 210px;
   }
 
   .taskDescription {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 
   #emptylist {
     font-size: 4vw;
   }
 }
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 376px) {
+  .sub-nav .nav-links .nav-item a {
+    padding: 6.5em 1.965em;
+  }
+}
+@media only screen and (max-width: 361px), (max-height: 568px) {
+  #myKanban {
+    height: 165px;
+  }
+
+  .acronym-title {
+    font-size: 13px;
+  }
+
+  #acronymBoxContainer {
+    padding-top: 10px;
+  }
+
+  #acronymBoxContainer div {
+    height: 150px;
+  }
+
+  .acronym-text {
+    font-size: 9.5px;
+    text-align: left;
+  }
+
+  .acronym-bottom-text {
+    font-size: 9px;
+    top: 80%;
+  }
+
   .top-nav .nav-links .nav-item a {
     padding: 2.2em 0;
   }
@@ -1067,6 +1223,54 @@ top: 24%;
 
   .Home-Body-Text {
     font-size: 9px;
+  }
+
+  .start-button, .reset-button, .stop-button {
+    height: 50px;
+    padding: 10px;
+    border-radius: 0px;
+  }
+
+  .timer-rectangle2 {
+    left: 30%;
+    top: 35.5%;
+    width: 40%;
+  }
+
+  .timer-rectangle2 div {
+    font-size: 9vw;
+  }
+
+  .pomodoro-togglemode {
+    top: 35%;
+    left: 76%;
+    margin-top: 49px;
+  }
+
+  .timer2-buttons {
+    bottom: 9%;
+  }
+
+  #workBtn, #shortBreakBtn, #longBreakBtn {
+    margin-bottom: 0px;
+    width: 50px;
+  }
+
+  .start2-button, .reset2-button, .stop2-button {
+    border-radius: 0px;
+  }
+
+  .setting-Button {
+    bottom: -5%;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .sub-nav .nav-links .nav-item a {
+    padding: 6.5em 0.965em;
+  }
+
+  .modal {
+    height: 100%;
   }
 }
 /*
@@ -1095,14 +1299,14 @@ top: 24%;
     padding-left: 50px;
   }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-height: 568px) {
   .tabs {
     height: 60vh;
   }
 
   .sub-nav .nav-links .nav-item a {
-    padding: 4.5em 1em;
-    font-size: 9px;
+    padding: 4.5em 0.2em;
+    font-size: 7px;
   }
 }
 #task-grid {
@@ -1225,6 +1429,12 @@ button.submitbutton {
 
   .not-done-button {
     font-size: 1.9vw;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .modal {
+    width: 100%;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */
