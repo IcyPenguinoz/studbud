@@ -143,6 +143,7 @@ $(document).ready(function() {
                 longBreakTime = $("#longbreakTime").val() * 60;
                 switchWorkTime();
                 console.log(workTime);
+                alert("Settings saved and added to timer modes!")
         });
     
         //Restart the timer - problem is also with reset - on long break time it resets to short break time 
