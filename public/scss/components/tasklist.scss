@@ -52,6 +52,18 @@ button.submitbutton{
         right: -5%;
         border: none;
     }
+    .setting-Button{
+        position: absolute;
+        bottom: 0%;
+        right: -5%;
+        border: none;
+    }
+    .setting-Button .buttonTag{
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+        padding: 9px 0px;
+    }
     .add-Button .buttonTag{
         width: 40px;
         height: 40px;
@@ -81,6 +93,20 @@ button.submitbutton{
             text-align: center;
         }
     }
+    .modal3{ //Makes modal full screen on mobile
+        width: 90%;
+        height: 70%;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        border-radius: 0px;
+        padding: 0;
+        h3{
+            font-size: 4.5vw;
+            text-align: center;
+        }
+    }
+
     #task-grid{
         grid-template-columns: 4fr 1fr;
     }
