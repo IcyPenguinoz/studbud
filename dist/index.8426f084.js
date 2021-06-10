@@ -445,7 +445,7 @@ id) /*: string*/
 //Code used from: https://stackoverflow.com/questions/33360298/javascript-taking-string-from-html-input-field-to-process-through-an-acronym-ge
 
 var words = document.getElementById("inputField").value.split(" ");
-$('#inputField').addClass('capitalize');
+$('#inputField').addClass('capitalize'); //capitalize class added to inputField so that first letter is always a capital letter when user is typing on the label field
 var acronym = "";
 for (var i = 0; i < words.length; i += 1) {
     acronym += words[i].charAt(0).toUpperCase();

@@ -583,15 +583,30 @@ button.addEventListener("click", function(event){
   let completionTime = completionTimeInput.value;
   let estimatedTime = estimatedTimeInput.value;
   let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
-  addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
-  /*
-  if (ValidateForm() == false){
+  if(task == "" || dueDate == "" || completionTime == "" || estimatedTime == "" || priorityRating == ""){
+    alert('You are missing input fields! Be sure to fill in all fields to add your task!');
+  } else{
     addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
   }
-  console.log(ValidateForm());
+  
+})
+
+
+/*
+  $('#taskform input').each(function() {
+    if ($(this).val() === '') {
+      formInvalid = true;
+    } else{
+      addTask(task, dueDate, priorityRating, estimatedTime, completionTime, false);
+    }
+  });
+
+  if (formInvalid)
+    alert('One or Two fields are empty. Please fill up all fields');
+  
   */
 
-})
+
 
 
 /*ValidateForm test 
@@ -803,7 +818,11 @@ var kanban = new jKanban({
 
 var addBoardDefault = document.getElementById('addDefault'); //addButton to add extra kanban column
 addBoardDefault.addEventListener('click', function () {
-    kanban.addBoards(
+    if (customColumnName.value == ""){ //added value checker - if it is empty, it will send alert and 
+      alert ("You have not entered in your column name!")
+    }
+    else{
+      kanban.addBoards(
         [{
             'id' : '_default',
             'title'  : customColumnName.value, //this gets input from form label textbox and makes it as the Kanban column title
@@ -818,7 +837,8 @@ addBoardDefault.addEventListener('click', function () {
             ]
         }]
     )
-    alert("Added new column!");
+      alert("Added new column!");
+    }
     document.querySelector("#addColumn").reset();
 });
 
