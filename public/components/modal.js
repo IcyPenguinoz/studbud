@@ -1,5 +1,6 @@
 //code adapted from: https://www.youtube.com/watch?v=KjQ8uvAt9kQ&t=534s&ab_channel=DevEdDevEd
 
+//Declaration of variables taken from html file
 var modalBtn = document.querySelector('#modal-btn');
 var modalBg = document.querySelector('.modal-bg');
 var modalClose = document.querySelector('#modal-close');
@@ -13,14 +14,14 @@ var modalBg3 = document.querySelector('.modal-bg3');
 var modalClose3 = document.querySelector('#modal-close3');
 
 
-
+//eventListener used to listen to when user has clicked plus button which pop ups modal box
 modalBtn.addEventListener('click', function(){
     modalBg.classList.add('bg-active');
     console.log(modalBg);
 
 });
 
-
+//Closes modal box when the user clicks the "X" on the top right
 modalClose.addEventListener('click', function(){
     modalBg.classList.remove('bg-active');
 

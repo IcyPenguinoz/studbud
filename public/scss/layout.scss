@@ -3,6 +3,8 @@
   padding: 0;
   }
 
+//background image alongside font declared as well inside app-container
+
 .app-container {
   background-image: url(../img/Background.png);
   font-family: 'Poppins', sans-serif;
@@ -21,12 +23,18 @@
   }
 }
 
+//padding used in order to give spacing for elements inside container (elements to the right of nav bar) for smaller screens
 
 @media only screen and (max-width: 855px) {
   .app-container{
       padding-left: 50px;
   }
 }
+
+
+
+
+//media query for height: 568px - changes tab height alongside padding size for the tabs
 
 @media only screen and (max-height: 568px) {
   .tabs{

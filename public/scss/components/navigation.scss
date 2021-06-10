@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+//Home-Page styling 
 
 .Home-Page-Container{
     margin: 0;
@@ -88,6 +89,9 @@
     list-style-position: inside;
 }
 
+//Side-nav bar styling alongside additional flexbox elements and hover/active colours
+//Red tinge on hover whilst full red on active
+
 .top-nav {
     width: 150px;
     height: 100%;
@@ -127,6 +131,10 @@
     }
     
 }
+
+
+//Top texts for different sections (kept same styling) - for instance: Task Management, Time Management and Acronym Maker section
+//All have the same consistent styling and positioning in order allow for a more consistent and better-looking/aesthethic look
 
 .top-text{
     display: flex;
@@ -180,6 +188,7 @@
 
 }
 
+//Tab size which is relative/the same for all other sections
 .tabs{
     width: 100%;
     height: 70vh;
@@ -190,6 +199,8 @@
 
 }
 
+//sub-navigation bar also styled with additional padding which is used to highlight the text in a red background colour
+//radius also used to get curves on each corner to make it look more unique/aesthethic
 .sub-nav{
     width: 100%;
     height: 15.9vh;
@@ -241,9 +252,13 @@
     
 }
 
+//margin between side-nav bar icon and text
+
 .fa-fw{
     margin-right: 2px;
 }
+
+//Modal background styling for task-list 
 
 .modal-bg{
     margin: auto;
@@ -261,10 +276,15 @@
     transition: visibility 0s, opacity 0,5s;
 }
 
+//Styling is done so that after a user clicks on the addButton it pops up the modal-background - visibility used to achieve this
+//Functionality is properly done inside modal.js script as well to achieve this effect
+
 .bg-active{
     visibility: visible;
     opacity: 1;
 }
+
+//Modal styling - background as white and according width and height done 
 
 .modal{
     position: relative;
@@ -278,6 +298,8 @@
     flex-direction: column;
 }
 
+//modal button set on the top-right
+
 #modal-close{
     position: absolute;
     top: 10px;
@@ -290,6 +312,7 @@
 
 
 
+//Similar modal styling done to add a column inside the "Kanban Board" section 
 .modal-bg2{
     margin: auto;
     position:fixed;
@@ -317,6 +340,8 @@
     align-items: center;
 }
 
+
+//However width and height adjusted to appropriately fit in model for "Kanban Board" specifically
 .modal2{
     position: relative;
     margin: auto;
@@ -340,10 +365,16 @@
 }
 
 
+//setting label width to enter column name to max width
+
+
+//Task Management Section//
 
 #kanbanColumnName{
     width: 100%;
 }
+
+//Submit new column button styling 
 
 #addDefault{
     margin-top: 20px;
@@ -364,15 +395,20 @@
     margin-left: 30px;
 }
 
+//height of tasklist boxes container to show task list boxes appropriately
+//overflow used to allow horizontal scrolling if the tasklist boxes exceed the width of tabs
 #tasklist{
     height: 200px;
     overflow-x: auto;
 }
 
+//Displays task-list-boxes in a row format (left to right) 
 .task-list-box-container{
     display: flex;
     flex-direction: row;
 }   
+
+//styling for task-list-boxes
 .task-list-boxes{
     position: relative;
     height: 150px;
@@ -385,6 +421,9 @@
     min-width: 250px;
 
 }
+
+//text fonts for task-list alongside other additional things 
+
 
 .task-list-boxes h2{
     font-size: 18px;
@@ -403,6 +442,9 @@
     height: 2px;
     background: white;
 }
+
+//Adding styling for the buttons so that they stay on the bottom of the .task-list-box-container
+//Alongside positioning, colour and size
 
 .task-list-buttons{
     display: flex;
@@ -449,6 +491,24 @@
     text-align: center;
 }
 
+#myKanban{
+    //padding-right: 10px;
+    text-align: center;
+    overflow-x: auto;
+    font-size: 16px;
+    height: 100%;
+    width: 99%;
+    padding-top: 10px;
+}
+
+.success{background: #00B961; color:#fff}
+.info{background: #B20D30; color:#fff}
+.warning{background: #F4CE46; color:#fff}
+.error{background: #FB7D44; color:#fff}
+
+
+//Button styling for both task list and Kanban Board sections
+//Styling positioning and green colour - alongside box-shadow to add a bit of dynamicness
 
 .add-Button{
     position: absolute;
@@ -475,6 +535,8 @@
     font-weight: bold;
 }
 
+//Styling also similarly done for setting button - instead different colour and positioning done with percentages
+
 .setting-Button{
     position: absolute;
     bottom: 5%;
@@ -500,6 +562,9 @@
     font-weight: bold;
 }
 
+//Time Management Section//
+
+//time styling for the stopwatch timer with additional gradient background to add visual appeal 
 .timer-rectangle{
     position: absolute;
     display: flex;
@@ -519,6 +584,7 @@
     font-weight: bold;
 }
 
+//Text colour inside div box set as white - alongside font size and width apart done
 .timer-rectangle div{
     color: white;
     font-size: 5.2vw;
@@ -526,6 +592,8 @@
     text-align: center;
     margin-bottom: 50px;
 }
+
+//Styling done for text which came after each according time - styled so that it would be underneath them 
 
 .timer-rectangle div:before
 {
@@ -562,6 +630,8 @@
 }
 
 
+
+//Stopwatch timer buttons styled in terms of positioning and colours
 .timer-buttons{
     position: absolute;
     display: flex;
@@ -589,6 +659,7 @@
 
 }
 
+//added hover aesthethic to start button to add a bit of diversity
 .start-button:hover{
     background-image: linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1));
 }
@@ -622,7 +693,6 @@
 }
 
 
-
 .timer-buttons div{
     float: left;
     text-align: center;
@@ -636,20 +706,7 @@
     background: red;
 }
 
-#myKanban{
-    //padding-right: 10px;
-    text-align: center;
-    overflow-x: auto;
-    font-size: 16px;
-    height: 100%;
-    width: 99%;
-    padding-top: 10px;
-}
-
-.success{background: #00B961; color:#fff}
-.info{background: #B20D30; color:#fff}
-.warning{background: #F4CE46; color:#fff}
-.error{background: #FB7D44; color:#fff}
+//Pomodoro timer rectangle styling done similarly to previous rectangle
 
 .timer-rectangle2{
     position: absolute;
@@ -705,6 +762,8 @@
 }
 
 
+//However only minutes and seconds added for pomodoro timer instead of milliseconds
+
 .timer-rectangle2 div.minutes2:before
 {
     content: 'MINUTES';
@@ -737,6 +796,8 @@
     text-align: center;
 }
 
+
+//Togglemode container to align all buttons beside pomodoro rectangle
 .pomodoro-togglemode{
     position: absolute;
     display: flex;
@@ -753,6 +814,7 @@
 
 }
 
+//Modal tab done for pomodoro timer settings as well - clicking on settings button opens up box to allow user to modify times
 .modal-bg3{
     margin: auto;
     position:fixed;
@@ -796,7 +858,7 @@
 
 }
 
-
+//Togglemode boxes set beside pomodoro rectangle timer to allow user to change modes
 #workBtn{
     border: none;
     background-image: linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1));
@@ -842,6 +904,7 @@
         border-radius: 20px;
 }
 
+//Buttons for pomodoro timer
 .start2-button{
     border: none;
     background-color: green;
@@ -896,7 +959,11 @@
     margin-left: 500px;
 }
 
-.pomodoro-sessions{ //Currently not responsive - ask about how to make it proper; can do modal tab for phone versions for responsiveness
+
+//Pomodoro Setting Styling//
+
+//Form styling to center inside modal box 
+.pomodoro-sessions{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -917,7 +984,7 @@
     font-size: 17px;
 }
 
-
+//Spacing and colour change to grey between text and label
 .pomodoro-form input{
     margin-left: 10px;
     padding-left: 10px;
@@ -955,7 +1022,9 @@ top: 24%;
 
 }
 
+//Acronym Maker Section//
 
+//Acronym text/elements set as a column so that they are spaced top down
 .acronym-container{
     display: flex;
     flex-direction: column;
@@ -971,6 +1040,8 @@ top: 24%;
     text-align: center;
 }
 
+//Styling to set generate box inside the middle of tabs, using position: absolute alongside left and top to do so
+//Gradient background also set behind to add a bit of nice visuals
 .acronym-box-text{
     position: absolute;
     display: flex; 
@@ -991,6 +1062,9 @@ top: 24%;
     font-weight: bold;
 
 }
+
+//Acronym box container inside "Acronym Viewer" section styled
+//Acronym container set from left to right alongside overflow used to allow acronym boxes to be viewed in a carousel style
 
 #acronymBoxContainer{
     padding-top: 50px;
@@ -1017,6 +1091,7 @@ top: 24%;
     font-size: 20px;
 }
 
+
 #inputField{
     border-style: none;
     position: absolute;
@@ -1027,10 +1102,12 @@ top: 24%;
     font-size: 30px;
 }
 
+//Used to capitalize text as the user types inside text label
 .capitalize{
     text-transform: capitalize;   
 }
 
+//Generate button with gradient and positioned next to label
 #generate{
     border-style: none;
     position: absolute;
@@ -1061,7 +1138,7 @@ top: 24%;
     font-size: 20px;
 }
 
-
+/*
 .responsive-iframe{
     position: absolute;
     top: 60%;
@@ -1070,9 +1147,11 @@ top: 24%;
     width: 50%;
     height: 60%;
 }
+*/
 
 
-
+//Media queries done for mobile versions - changes done to all sections in order to properly adjust to mobile versions
+//Mainly involved making sections smaller - e.g. font-size, different positioning and smaller sizing to fit these mobile versions
 
 @media only screen and (max-width: 855px) {
 
@@ -1150,6 +1229,10 @@ top: 24%;
 
     #acronymBoxContainer{
         padding-top: 20px;
+    }
+
+    #myKanban{
+        height: 260px;
     }
 
     .timer-rectangle{

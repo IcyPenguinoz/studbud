@@ -1,3 +1,5 @@
+//importing javascript files from "components" so that navigation works
+//Alongside not needing to link the tasklist.js in the HTML file
 import Navigation from './components/navigation';
 import './components/tasklist';
 import './components/addButton';
