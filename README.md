@@ -32,6 +32,6 @@ Instead of making a new fully fletched music player, I had instead used a spotif
 
 Conclusion:
 
-All in all, majority of the styles and elements were kept from the old mockup - however using feedback from peers and my tutor - alongside my own self-reflection and judgement, the addition of using modal tabs, validation elements and considerations to responsive design helped elevate and improve this final web application - in being more usable and visually clear for desktop and mobile versions. 
+All in all, majority of the styles and elements were kept from the old mockup - however using feedback from peers and my tutor - alongside my own self-reflection and judgement, the addition of using modal tabs, validation elements and considerations to responsive design helped elevate and improve this final web application - in being more usable and visually clear for desktop and mobile versions. Using modal tabs was a new yet refreshing element which allowed the user more space to add in their own inputs manner without restricting any more unnecessary alongside being very useful for responsive design - such as on phone screens whereby the modal can fill up majority of the width and height of the screen in order to allow the user to see and add in their own inputs accordingly 
 
 
