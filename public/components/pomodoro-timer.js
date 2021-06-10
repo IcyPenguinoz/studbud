@@ -12,7 +12,7 @@ $(document).ready(function() {
         var working = true;
         var pause = true;
         var counter = 0;
-        var test = 0; //testValue used to properly make the pomodoro timer work - can perhaps change name to something better
+        var timerMode = 0; //timerMode used in order to properly make shortBreakTime and longBreakTime modes work throughout the code
         //var pomodoroLoop = 5;
     
         //Sound for timer ring 
@@ -37,10 +37,10 @@ $(document).ready(function() {
                         displayTime();
                 } else if (working && currentTime == 0 && counter < 4) { //This is what switches the time - if currentTime = 0 and the person is working
                     //then switch to break-time
-                        test = 50; 
+                        timerMode = 50; 
                         switchBreakTime(); //colours fixed by dynamically changing value before it switches to be able to change colour 
                 } else if (working && currentTime == 0 && counter == 4){ //otherwise keep working/stay on working - works when counter is set at 5 HOWEVER becomes stuck there
-                        test = 2;
+                        timerMode = 2;
                         switchLongBreakTime(); //issue where it seems like background-color of longBreakTime is still same as gradient colur of shortBreakTime
                 } else{
                     switchWorkTime(); 
@@ -64,11 +64,11 @@ $(document).ready(function() {
     
         //Toggles the appearance of the buttons while not making it spamable - problem, background colour not changing
         function toggleButtons() {
-                if (!working && test == 50) {
+                if (!working && timerMode == 50) {
         
                         $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
                         $(".timer-rectangle2").css("background-image", "linear-gradient(red, yellow)");
-                }else if (!working && test == 2){ //background colour for longBreak doesn't seem to work
+                }else if (!working && timerMode == 2){ //background colour for longBreak doesn't seem to work
                         $("longBreakBtn").removeClass("btn-danger").addClass("btn-default active");
                         $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
                         $(".timer-rectangle2").css("background", "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)");
@@ -83,7 +83,7 @@ $(document).ready(function() {
     
         //Switches the current time to break time 
         function switchBreakTime() {
-                if (!working &&  test == 2) {
+                if (!working &&  timerMode == 2) {
                         return;
                 }
     
@@ -98,7 +98,7 @@ $(document).ready(function() {
     
         //switches from current time to long break time after 4 cycles  problem, not working when switching to short break time
         function switchLongBreakTime(){
-            if (!working && test == 50) { //only seems to work when % pomodoroLoop === 0
+            if (!working && timerMode == 50) { //only seems to work when % pomodoroLoop === 0
                     return;
             }
     
@@ -158,10 +158,10 @@ $(document).ready(function() {
                 if (working) {
                         working = false;
                         switchWorkTime();
-                } else if (!working && test == 2){
+                } else if (!working && timerMode == 2){
                         working = true;
                         switchLongBreakTime();
-                } else if (!working && test == 50){
+                } else if (!working && timerMode == 50){
                         working = true;
                         switchBreakTime();
                 }
@@ -178,8 +178,8 @@ $(document).ready(function() {
         $("#shortBreakBtn").on("click", function() {
                 /*$("#breakBtn").removeClass("btn-primary").addClass("btn-default active");
                 $("#workBtn").removeClass("btn-default active").addClass("btn-danger");*/
-                test = 50;
-                console.log(test);
+                timerMode = 50;
+                console.log(timerMode);
                 switchBreakTime();
         
         });
@@ -187,8 +187,8 @@ $(document).ready(function() {
         $("#longBreakBtn").on("click", function() {
             /*$("#breakBtn").removeClass("btn-primary").addClass("btn-default active");
             $("#workBtn").removeClass("btn-default active").addClass("btn-danger");*/
-            test = 2;
-            console.log(test);
+            timerMode = 2;
+            console.log(timerMode);
             switchLongBreakTime();
     });
     
