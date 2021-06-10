@@ -515,16 +515,18 @@ $(document).ready(function() {
         //Toggles the appearance/colour of the buttons
         function toggleButtons() {
                 if (!working && timerMode == 50) {
-        
+                        //Sets the shortBreakBtn and timer-rectangle background gradient to red to yellow tinge
                         $("#shortBreakBtn")
                         $(".timer-rectangle2").css("background-image", "linear-gradient(red, yellow)");
-                }else if (!working && timerMode == 2){ //background colour for longBreak doesn't seem to work
+                }else if (!working && timerMode == 2){ 
+                        //Sets the longBreakBtn and timer-rectangle background gradient to purple to yellow tinge
                         $("longBreakBtn")
                         $("#shortBreakBtn")
                         $(".timer-rectangle2").css("background", "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)");
                         
     
                 } else{
+                    //Sets the workBtn and timer-rectangle background gradient to green tinge
                     $("#workBtn")
                     $("#shortBreakBtn")
                     $(".timer-rectangle2").css("background-image", "linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1))");
