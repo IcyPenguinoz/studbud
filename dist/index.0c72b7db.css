@@ -378,6 +378,30 @@
   font-size: 12px;
   text-align: center;
 }
+#myKanban {
+  text-align: center;
+  overflow-x: auto;
+  font-size: 16px;
+  height: 100%;
+  width: 99%;
+  padding-top: 10px;
+}
+.success {
+  background: #00B961;
+  color: #fff;
+}
+.info {
+  background: #B20D30;
+  color: #fff;
+}
+.warning {
+  background: #F4CE46;
+  color: #fff;
+}
+.error {
+  background: #FB7D44;
+  color: #fff;
+}
 .add-Button {
   position: absolute;
   bottom: 3.1rem;
@@ -528,30 +552,6 @@
 .pomodoro-timer-spacing {
   padding-right: 500px;
   background: red;
-}
-#myKanban {
-  text-align: center;
-  overflow-x: auto;
-  font-size: 16px;
-  height: 100%;
-  width: 99%;
-  padding-top: 10px;
-}
-.success {
-  background: #00B961;
-  color: #fff;
-}
-.info {
-  background: #B20D30;
-  color: #fff;
-}
-.warning {
-  background: #F4CE46;
-  color: #fff;
-}
-.error {
-  background: #FB7D44;
-  color: #fff;
 }
 .timer-rectangle2 {
   position: absolute;
@@ -893,14 +893,16 @@ top: 24%;
 #result {
   font-size: 20px;
 }
-.responsive-iframe {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 60%;
+/*
+.responsive-iframe{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 60%;
 }
+*/
 @media only screen and (max-width: 855px) {
   .top-text {
     flex-direction: column;
@@ -968,6 +970,10 @@ top: 24%;
 
   #acronymBoxContainer {
     padding-top: 20px;
+  }
+
+  #myKanban {
+    height: 260px;
   }
 
   .timer-rectangle {

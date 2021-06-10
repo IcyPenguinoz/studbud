@@ -444,8 +444,10 @@ id) /*: string*/
 },{}],"4QyTw":[function(require,module,exports) {
 //Code used from: https://stackoverflow.com/questions/33360298/javascript-taking-string-from-html-input-field-to-process-through-an-acronym-ge
 
+
 var words = document.getElementById("inputField").value.split(" ");
-$('#inputField').addClass('capitalize'); //capitalize class added to inputField so that first letter is always a capital letter when user is typing on the label field
+//capitalize class added to inputField so that first letter is always a capital letter when user is typing on the label field
+$('#inputField').addClass('capitalize'); 
 var acronym = "";
 for (var i = 0; i < words.length; i += 1) {
     acronym += words[i].charAt(0).toUpperCase();
@@ -458,8 +460,11 @@ $('#generate').click(function(){
     var words = myVar.split(" ");
     console.log(words);
     //var showWords = myVar.split(" ");
+    //For statement used in order to capitalize first letter of string text and concatenate other letters
+    //As well as show other words as well from user input
     for (let i = 0; i < words.length; i++){
-        words[i] = words[i][0].toUpperCase() + words[i].substr(1) + "<br>"; //<br> breaks string into different lines
+        //<br> breaks string into different lines to be shown in a better and more appropriate manner
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1) + "<br>"; 
         words.join(''); 
     }
 
@@ -467,15 +472,19 @@ $('#generate').click(function(){
     //console.log(words.join(' '));
     
 
-
+    //Acronym which is shown on the top of the acronym box inside "Acronym Viewer" as the head/title
     var acronym = words.map(function(word) {
     return word.charAt(0).toUpperCase();
     }).join('');
     console.log(words);
+
+    //Alert shown to give user feedback as generate button and input is done
     alert("Acronym generated! See it in \'Acronym Viewer\"");
-    $('#inputField').val(''); //resets inputfield after adding in acronym
+    //Resets inputfield after adding in acronym
+    $('#inputField').val(''); 
     //$("#result").html("Acronym generated! See it in \'Acronym Viewer\""); //acronym is variable which should be shown on head/title of div card
-    $("#acronymBoxContainer").append("<div class = task-list-boxes>" + "<h2>" + acronym + "</h2>" + "<p>" + words.join(' ') + "</p>" + "</div>"); //this appends new acronyms to div elements 
+    //this appends new acronyms to div elements 
+    $("#acronymBoxContainer").append("<div class = task-list-boxes>" + "<h2>" + acronym + "</h2>" + "<p>" + words.join(' ') + "</p>" + "</div>"); 
     //can just add words.join(' ') to the div output which works
 
     /*

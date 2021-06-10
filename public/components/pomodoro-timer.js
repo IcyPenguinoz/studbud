@@ -2,17 +2,19 @@
 //Need to have long break time after 4 cycles of 5 minute breaks then after long break - counter resets and it goes back to work mode
 //Need to find a seperate condition apart from just working and !working or try to find a way to work around it 
 //Added a seperate test value to properly ensure that based on test value - which is used to check buttton value - it will execute properly
-//Test value used and worked to properly fix issues with resetting time and switching   
+//timerMode value used and worked, to properly fix issues with resetting time and switching times
 
 $(document).ready(function() {
-        var breakTime = 300; //In seconds
-        var workTime = 1500; //In seconds
+        //Declaration of variables at the top 
+        var breakTime = 300; //Set in seconds
+        var workTime = 1500; //Set in seconds
         var longBreakTime = 1800;
         var currentTime = workTime;
-        var working = true;
+        var working = true; 
         var pause = true;
         var counter = 0;
-        var timerMode = 0; //timerMode used in order to properly make shortBreakTime and longBreakTime modes work throughout the code
+        //timerMode value used in order to properly make shortBreakTime and longBreakTime modes work throughout the code
+        var timerMode = 0; 
         //var pomodoroLoop = 5;
     
         //Sound for timer ring 
@@ -35,14 +37,18 @@ $(document).ready(function() {
                 if (currentTime >= 1) {
                         currentTime--;
                         displayTime();
-                } else if (working && currentTime == 0 && counter < 4) { //This is what switches the time - if currentTime = 0 and the person is working
-                    //then switch to break-time
+                //This is what switches the time - if currentTime = 0 and the countercycle is less than 4 and the person is working
+                //Then switch to break-time
+                } else if (working && currentTime == 0 && counter < 4) { 
+                        //Colours issue fixed by dynamically changing value before it switches, to be able to change colour 
                         timerMode = 50; 
-                        switchBreakTime(); //colours fixed by dynamically changing value before it switches to be able to change colour 
-                } else if (working && currentTime == 0 && counter == 4){ //otherwise keep working/stay on working - works when counter is set at 5 HOWEVER becomes stuck there
+                        switchBreakTime(); 
+                //Otherwise if the counter is equals to 4 suggesting that it has looped 4 times, then switch to the longBreakTime
+                } else if (working && currentTime == 0 && counter == 4){ 
                         timerMode = 2;
-                        switchLongBreakTime(); //issue where it seems like background-color of longBreakTime is still same as gradient colur of shortBreakTime
+                        switchLongBreakTime(); 
                 } else{
+                    //otherwise keep working/stay on working time
                     switchWorkTime(); 
                     console.log(working)
                 }
@@ -62,21 +68,21 @@ $(document).ready(function() {
                 $("#time-text").text(min + ":" + sec);
         }
     
-        //Toggles the appearance of the buttons while not making it spamable - problem, background colour not changing
+        //Toggles the appearance/colour of the buttons
         function toggleButtons() {
                 if (!working && timerMode == 50) {
         
-                        $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
+                        $("#shortBreakBtn")
                         $(".timer-rectangle2").css("background-image", "linear-gradient(red, yellow)");
                 }else if (!working && timerMode == 2){ //background colour for longBreak doesn't seem to work
-                        $("longBreakBtn").removeClass("btn-danger").addClass("btn-default active");
-                        $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
+                        $("longBreakBtn")
+                        $("#shortBreakBtn")
                         $(".timer-rectangle2").css("background", "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)");
                         
     
                 } else{
-                    $("#workBtn").removeClass("btn-danger").addClass("btn-default active");
-                    $("#shortBreakBtn").removeClass("btn-primary active").addClass("btn-primary");
+                    $("#workBtn")
+                    $("#shortBreakBtn")
                     $(".timer-rectangle2").css("background-image", "linear-gradient(to bottom right, rgba(81,209,131,1), rgba(96,181,212,1))");
                 }  
         }
@@ -86,17 +92,17 @@ $(document).ready(function() {
                 if (!working &&  timerMode == 2) {
                         return;
                 }
-    
+                //Adds to counter cycle as it begins switching to the shortBreakTime
                 counter = counter + 1;
                 working = false;
                 console.log(working);
                 toggleButtons();
                 currentTime = breakTime;
                 displayTime();
-                console.log (counter); //counter will be used to determine cycles if after 4 cycles of short break then 30 min long break
+                console.log (counter); 
         }
     
-        //switches from current time to long break time after 4 cycles  problem, not working when switching to short break time
+        //Switches from current time to long break time after 4 cycles
         function switchLongBreakTime(){
             if (!working && timerMode == 50) { //only seems to work when % pomodoroLoop === 0
                     return;
@@ -107,8 +113,9 @@ $(document).ready(function() {
             toggleButtons();
             currentTime = longBreakTime;
             displayTime();
+            //Counter cycle is reset to 0 after user has a long break
             counter = 0;
-            console.log (counter); //counter will be used to determine cycles if after 4 cycles of short break then 30 min long break
+            console.log (counter); 
         }    
     
         //Switches the current time to work time
@@ -140,20 +147,23 @@ $(document).ready(function() {
                 workTime = $("#workTime").val() * 60;
                 breakTime = $("#breakTime").val() * 60;
                 longBreakTime = $("#longbreakTime").val() * 60;
+                //If the value inside labels are empty, then alert the user that they have not filled in the labels
                 if (workTime == "" || breakTime == "" || longBreakTime == ""){
                     working = true;
-                    alert("You have not filled in the time for the timer modes!"); //validation field for 
+                    alert("You have not filled in the time for the timer modes!"); //validation field alert
                 }
+                //Otherwise give feedback to user that the settings have been saved and added to times inside timer mode
                 else{
                    working = false;
                    console.log(workTime);
                    alert("Settings saved and added to timer modes!");
                    switchWorkTime();
                 }
+                //Resets form after person submits pomodoro timing settings
                 document.querySelector(".pomodoro-form").reset();
         });
     
-        //Restart the timer - problem is also with reset - on long break time it resets to short break time 
+        //Restart the timers
         $(".reset2-button").on("click", function() {
                 if (working) {
                         working = false;
@@ -193,9 +203,9 @@ $(document).ready(function() {
     });
     
         
-        //Toggle the pause var when the pause button is clicked
+        //Toggle the pause variable when the pause button is clicked
         $(".start2-button").on("click", function() {
-                pause = false;
+                 pause = false;
                 
         })
     

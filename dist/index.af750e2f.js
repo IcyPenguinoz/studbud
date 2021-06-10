@@ -442,6 +442,8 @@ id) /*: string*/
 }
 
 },{}],"4w2wn":[function(require,module,exports) {
+//Code adapted from: https://www.youtube.com/watch?v=oMwaMYwHkS8&ab_channel=GowthamTirriGowthamTirri
+
 var seconds = 00;
 var milliseconds = 00;
 var minutes = 00;
@@ -454,7 +456,7 @@ var buttonStop = document.getElementsByClassName("stop")[0];
 
 
 var interval;
-/* global clicks variable is used to ensure that start button is only clicked once*/
+/* global clicks variable is used to ensure that start button is only clicked once and not spammed*/
 var clicks = 0;
 
 
@@ -490,10 +492,13 @@ function startTimer(){
 
 
 buttonStart.onclick = function(){
+    //Clicks value added
     clicks += 1;
+    //If clicks is more than one than disable the button to stop it from working
     if (clicks > 1){
         buttonStart.disabled = true;
     }
+    //Otherwise start the timer
     else{
         interval = setInterval(startTimer, 10);
     }

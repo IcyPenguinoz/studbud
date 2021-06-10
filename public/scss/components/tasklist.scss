@@ -1,3 +1,5 @@
+//Grid display used to properly align tasks element alongside give proper width for horizontal task display to fit tab screen
+
 #task-grid{
     display: grid;
     grid-template-columns: 50fr 1fr;
@@ -5,7 +7,7 @@
     grid-template-areas: "tasklist taskform";
 }
 
-#taskform{ //how to make taskform just stay on right side of the screen alongside proper spacing between labels?
+#taskform{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -31,6 +33,8 @@
     grid-area: tasklist;
 }
 
+
+//Green submit button styled inside modal tab 
 button.submitbutton{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -44,6 +48,9 @@ button.submitbutton{
     font-weight: bold;
     cursor: pointer;
 }
+
+//media query for mobile screens for task-list screen - adjusting the add button alongside setting button inside Pomodoro Timer
+//As well as modal tabs
 
 @media only screen and (max-width: 700px) {
     .add-Button {
@@ -70,7 +77,10 @@ button.submitbutton{
         font-size: 15px;
         padding: 9px 0px;
     }
-    .modal{ //Makes modal full screen on mobile
+
+    //overflow: auto to allow scroll in case text overflows screen 
+
+    .modal{ //Modal screen for Task List 
         width: 90%;
         height: 90%;
         overflow: auto;
@@ -80,7 +90,7 @@ button.submitbutton{
         padding: 0;
     }
 
-    .modal2{ //Makes modal full screen on mobile
+    .modal2{ //Modal screen for Kanban Board
         width: 90%;
         height: 40%;
         overflow: auto;
@@ -93,7 +103,7 @@ button.submitbutton{
             text-align: center;
         }
     }
-    .modal3{ //Makes modal full screen on mobile
+    .modal3{ //Modal screen for Pomodoro Timer settings
         width: 100%;
         height: 70%;
         overflow: auto;
@@ -107,7 +117,7 @@ button.submitbutton{
         }
     }
 
-    #task-grid{
+    #task-grid{  //grid-column changed to 4fr to fit width inside phone screen
         grid-template-columns: 4fr 1fr;
     }
     .done-button{
@@ -119,12 +129,13 @@ button.submitbutton{
     }
 }
 
+
 @media only screen and (max-width: 320px) {
-    .modal{ //Makes modal full screen on mobile
+    .modal{ //Makes modal full screen on mobile screens like Iphone 5
         width: 100%;
         height: 100%;
     }
-    .setting-Button{
+    .setting-Button{ //Makes setting button on Pomodoro Timer further down on screens like Iphone 5 
         bottom: -5%;
     }
 }
