@@ -442,7 +442,7 @@ id) /*: string*/
 }
 
 },{}],"4LxbO":[function(require,module,exports) {
-//code adapted from: https://www.youtube.com/watch?v=KjQ8uvAt9kQ&t=534s&ab_channel=DevEdDevEd
+//Code adapted from: https://www.youtube.com/watch?v=KjQ8uvAt9kQ&t=534s&ab_channel=DevEdDevEd
 
 //Declaration of variables taken from html file
 var modalBtn = document.querySelector('#modal-btn');

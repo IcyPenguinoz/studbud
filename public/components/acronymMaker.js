@@ -1,6 +1,5 @@
 //Code used from: https://stackoverflow.com/questions/33360298/javascript-taking-string-from-html-input-field-to-process-through-an-acronym-ge
 
-
 var words = document.getElementById("inputField").value.split(" ");
 //capitalize class added to inputField so that first letter is always a capital letter when user is typing on the label field
 $('#inputField').addClass('capitalize'); 

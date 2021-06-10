@@ -442,7 +442,7 @@ id) /*: string*/
 }
 
 },{}],"1z1yc":[function(require,module,exports) {
-//code used from: https://codepen.io/nickpalmer789/pen/WQNRWY
+//Code adapted from: https://codepen.io/nickpalmer789/pen/WQNRWY
 //Need to have long break time after 4 cycles of 5 minute breaks then after long break - counter resets and it goes back to work mode
 //Need to find a seperate condition apart from just working and !working or try to find a way to work around it 
 //Added a seperate test value to properly ensure that based on test value - which is used to check buttton value - it will execute properly
