@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studbud</title>
+    <!--Declaration of according javascript and css scripts/links-->
     <link rel = "stylesheet" href = "fontawesome/css/all.min.css">
     <link rel = "stylesheet" href = "fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="jkanban-V2/dist/jkanban.min.css"> 
@@ -15,7 +16,8 @@
 </head>
 
 <body class = "app-container">
-
+    
+    <!--Side nav bar used and labelled with appropriate names alongside fontawesome icons-->
     <nav class = "top-nav"> 
         <h2 class = "logo-text"> Studbud</h2>   
         <ul class = "nav-links">
@@ -58,7 +60,7 @@
                 </ul>
             </div>
             <br>
-            <button type = "button" class = "button"> Get Started!</button>
+            <a href = "#page1" class = "button">  Get Started! </a> <!--Attempt to link Get Started button to task-->
         </div>
     </div>
 
@@ -75,8 +77,10 @@
             </div>
         </div>
         <br>
+        <!--Tabs used in order to give white spacing below sub-nav bar and contain elements inside it-->
         <div class = "tabs">
             <nav class = "sub-nav">
+                <!--Sub-nav bar used in order to alternate between tabs - in accordance single page requirement-->
                 <ul class = "nav-links">
                     <li class = "nav-item"> <a href = "#page1-1" class = "active">  <i class="fas fa-tasks fa-fw"></i> Task List</a></li>
                     <li class = "nav-item"> <a href = "#page1-2"> <i class="fas fa-table fa-fw"></i> Kanban Board</a></li>
@@ -84,6 +88,7 @@
             </nav>
             <br>
             <div id = "page1-1" class = "sub-page-container"> 
+                 <!--This is the "Task List" tab-->
                 <h2 class = taskDescription> Task Description </h2>
                 <!--
                 <div id = "task-box" style = "display: none;">
@@ -103,6 +108,8 @@
                     <div id = "tasklist">
                         <p id = "emptylist"> You have not added any tasks yet. Enter your tasks by clicking the "+" button!</p>
                         <br>
+                        <!--This list/div element allows the user to see their new tasks added on a horizontal plane-->
+                        <!--It allows them to clarify whether their tasks are Done or Not Done which they can accordingly see updated on the "Kanban Board"-->
                         <ul>
                             <div class = "task-list-box-container"> 
                             </div>
@@ -111,6 +118,8 @@
                     <!--<div class = "add-Button">
                         <button class = "buttonTag"><i class = "fas fa-plus"></i></button>
                      </div> -->
+
+                    <!--Add button to open modaltab to add tasks to tasklist -->
                     
                      <div class = "add-Button">
                         <button class = "buttonTag" id = "modal-btn"><i class = "fas fa-plus"></i></button>
@@ -119,6 +128,7 @@
     
     
                     </div>
+                    <!--Modal tab which encapulates the form inside for the user to fill in and accordingly add their task -->
                     <div class = "modal-bg">
                         <div class = "modal">
                             <form id = "taskform">
@@ -161,6 +171,7 @@
                         
                                 
                             </form>
+                            <!--Modal close button-->
                             <i id = "modal-close" class="far fa-window-close"></i>
                             
                         </div>
@@ -169,15 +180,19 @@
             </div>
     
             <div id = "page1-2" class = "sub-page-container visible" style = "display: none;"> 
+                <!--Adding kanban board inside "Kanban Board" tab-->
                 <div id="myKanban">
                 </div>
                 <!--Incorporation of jKanban element, NOTE: With new code - it recognises this as Kanban is defined
                 inside tasklist.js which is defined inside scripts.js-->
                 <script src="components/addKanbanBoard.js"></script>
+
+                <!--Modal tab attached and used on add button in order to allow user to add custom column-->
                 <div class = "add-Button">
-                    <button class="buttonTag" id = "modal-btn2"><i class = "fas fa-plus"></i></button> <!--Button seems to open modal tab from 1st page-->
+                    <button class="buttonTag" id = "modal-btn2"><i class = "fas fa-plus"></i></button> 
                 </div>
 
+                <!--Modal tab contains form indicating that user can add their own custom columns inside here-->
                 <div class = "modal-bg2">
                     <div class = "modal2">
                         <h3>Add your own custom columns here!</h3>
@@ -188,7 +203,7 @@
                             <input type = "text" id="kanbanColumnName">
                             <br>
                         </form>
-                        <button id= "addDefault" type = "submit">Submit</button> <!--Has to do with the button inside the form-->
+                        <button id= "addDefault" type = "submit">Submit</button> 
                         <i id = "modal-close2" class="far fa-window-close"></i>
                             
                     </div>
@@ -225,6 +240,7 @@
             </nav>
                 <br>
                 <div id = "page2-1" class = "sub-page-container"> 
+                    <!--This is the "Stopwatch Timer" tab-->
                     <!--<h2 style = "display: none;"> Description3</h2> -->
                     <div class = "timer-rectangle">
                         <div class = "minutes">00</div>
@@ -244,11 +260,12 @@
                             <button class = "stop-button">Stop  </button>
                         </div>
                     </div>
-                    <!--Link to stopwatch timer js file-->
+                    <!--Links to stopwatch timer js file in order for stopwatch timer to function-->
                     <script src = "components/stopwatch.js"></script>
                 </div>
         
                 <div id = "page2-2" class = "sub-page-container" style = "display: none;"> 
+                    <!--This is the "Pomodoro Timer" tab-->
                     <div class = "pomodoro-container">
                             <div class = "timer-rectangle2">
                                 <div class = "minutes2" id = "time-text" > </div>
@@ -266,6 +283,7 @@
                             </div>
                         </div>
 
+                        <!--Different pomodoro modes which a person can toggle between with buttons - different gradient backgrounds indicate different modes-->
                         <div class = "pomodoro-togglemode">
                             <button id="workBtn" class = "tile">Work Mode </button>
                             <button id="shortBreakBtn" class = "tile">Short Break Time</button>
@@ -273,13 +291,14 @@
                         </div>
                     </div>
 
+                    <!--Addition of settings button on bottom-right corner to allow user to modify and edit pomodoro sessions and break times-->
                     <div class = "setting-Button">
                         <button class="buttonTag" id = "modal-btn3"><i class = "fas fa-cogs"></i></button>
                     </div>
 
 
             
-
+                    <!--Modal tab set once again to allow user to edit their pomodoro sessions and break times in a new tab-->
                     <div class = "modal-bg3">
                         <div class = "modal3">
                             <div class = "pomodoro-sessions">
@@ -299,20 +318,20 @@
                                     <br>
         
                                     <label for="lname">Long Break:</label>
-                                    <input type="number" id="longbreakTime" name="lname"> <br>
+                                    <input type="number" id="longbreakTime" name="lname"> <br> <!--longbreakTime set accordingly to pomodoro js file-->
         
                                     <br>
         
                                 </form>
         
                                 <br>
-        
+                                
+                                <!--Done button to allow user to submit their new pomodoro session/break times-->
                                 <button type = "submit" id ="updateBtn"  class = "pomodoro-done"> Done </button> 
                             </div>
                             <i id = "modal-close3" class="far fa-window-close"></i>
                         </div>
                     </div>
-                    <!--Ask if for pomodoro session text, should use grid or just style it using CSS-->
                 </div>
         </div>
 
@@ -342,12 +361,14 @@
             </nav>
             <br>
             <div id = "page3-1" class = "sub-page-container"> 
+                <!--This is the "Acronym Maker" tab-->
                 <div class = "acronym-container">
                     <div class = "acronym-text">
                         <p> Enter in at least 3 words - seperated by a space! For example: cat dog chicken.</p>
                     </div>
                     <div class = "acronym-box">
                         <div class = "acronym-box-text">
+                             <!--Placeholder text added to allow user to know to put their words inside that label-->
                             <input id = "inputField" type = "text" placeholder = "Enter your words here"> 
                             <button id = "generate"> Generate </button>
                         </div>
@@ -357,13 +378,15 @@
                     <div class = "acronym-bottom-text">
                         <p>Then click generate to generate your acronym!</p>
                         <br>
-                        <p id = "result"> </p>
+                        <!--p id = "result"> </p>-->
                     </div>
                     
                 </div>
             </div>
                 <div id = "page3-2" class = "sub-page-container" style = "display: none;">
+                    <!--This is the "Acronym Viewer" tab-->
                     <h1 class = "acronym-title" style = "text-align: center"> Your Acronyms:</h1>
+                     <!--Acronym boxes added as the user generates their acronyms from "Acronym Maker" -->
                     <div id = acronymBoxContainer>
 
                     </div>
@@ -372,6 +395,7 @@
     </div>
 
     <div id = 'page4' class = "page-container">
+        <!--This is the "Music Player" tab-->
         <h1 id = "musicTitle"> Music Player</h1>
         <br>
         <div class = "tabs">
@@ -381,13 +405,15 @@
                 </ul>
             </nav>
             <div id = "page4-1" class = "sub-page-container"> 
-                <!-- Use of lofi playlist as a way to help during studying process - lofi music helps keep the human brain more focused-->
+                <!-- Use of lofi playlist as a way to help during studying process - lofi music helps keep the user to be more relaxed and focused-->
+                <!--Used spotify iframe which also has responsiveness for music player-->
                 <div style="left: 0%; width: 100%; height: 80%; position: absolute;"><iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media"></iframe></div>
         </div>
         
 
     </div>
 
+    <!--Extra javascript files declared at the end as well-->
     <script src = "scripts.js"></script>
     <script src = "components/acronymMaker.js"></script>
     <script src = "components/pomodoro-timer.js"></script>

@@ -563,6 +563,7 @@ var tasklist = document.querySelector("#tasklist > ul > div");
 /*
 var homeLink = document.querySelector(".button").onclick = function() {
   location.href = "http://localhost:1234/#page1";
+  
 };
 
 */
