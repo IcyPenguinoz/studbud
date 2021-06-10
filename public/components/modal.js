@@ -1,3 +1,5 @@
+//code adapted from: https://www.youtube.com/watch?v=KjQ8uvAt9kQ&t=534s&ab_channel=DevEdDevEd
+
 var modalBtn = document.querySelector('#modal-btn');
 var modalBg = document.querySelector('.modal-bg');
 var modalClose = document.querySelector('#modal-close');

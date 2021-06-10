@@ -137,13 +137,19 @@ $(document).ready(function() {
     
         //Update the timer
         $("#updateBtn").on("click", function() {
-                working = false;
                 workTime = $("#workTime").val() * 60;
                 breakTime = $("#breakTime").val() * 60;
                 longBreakTime = $("#longbreakTime").val() * 60;
-                switchWorkTime();
-                console.log(workTime);
-                alert("Settings saved and added to timer modes!");
+                if (workTime == "" || breakTime == "" || longBreakTime == ""){
+                    working = true;
+                    alert("You have not filled in the time for the timer modes!"); //validation field for 
+                }
+                else{
+                   working = false;
+                   console.log(workTime);
+                   alert("Settings saved and added to timer modes!");
+                   switchWorkTime();
+                }
                 document.querySelector(".pomodoro-form").reset();
         });
     
