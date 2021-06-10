@@ -23,12 +23,15 @@ The stopwatch timer had been kept the same as the old mockup as the style was ae
 In mentioning this, side-tabs of the different timing modes were also shown beside the Pomodoro Timer rectangle to show the different gradients and colour schemes for each mode - with each of them accordingly used to distinguish them and visually tell the user the different modes of the pomodoro timer without needing to explain it, different from my old mockup which didn't use different colour modes but instead just had one main big rectangle which isn't as clear as to how these different modes will appear as the current version is. A validation form was once again also incorporated to allow the freedom for the user to edit and modify their times, and ensure they have entered all fields in before beginning to start the pomodoro timer. The pomodoro timer is also set in a manageable manner such that personas such as the Music Student and the Computer Science Student can quickly edit their own times and settings and getting straight into efficient and quick study period sessions in an effortless manner. 
 
 Acronym Maker:
+
 The acronym maker had also been kept the same however a similar green gradient was used to ensure consistency, alongside the addition of an acronym viewer tab inside the sub-navigation tab to allow the user to jump back and forth between the two tabs so that they can add in the phrases they want to generate their acronym, and view the acronyms they have created in a horizontal box carousel manner. Similarly, instead of using a complex carousel - a simple overflow was used to ensure the user can scroll past the acronym boxes inside the "Acronym Viewer". Due to the extra complexity of using different colour coding in accordance to the acronym and the phrases, I had instead had the acronym phrases presented one word per line and ensured the background colour for the acronym was red and kept the same - in ensuring it was not overbearing for the personas - such as the Medical Student who would to be able to see all their acronyms created from many phrases and terms in a concise and straightforward manner.
 
 Music Player:
+
 Instead of making a new fully fletched music player, I had instead used a spotify iframe responsive element lofi playlist which would be suitable for all my personas who want calming and enjoyable music to focus on their study sessions. This was more easier to implement and more suitable than creating a new music player which would waste time and effort instead of just using a lofi playlist, with lofi music being chosen as it is said to help keep a person's brain at focus and helps them maintain this mindset of focus overtime (Lutes, 2017) - Lutes, B. (n.d.). Lo Fi Music. Hyde. Retrieved June 11, 2021, from https://www.hyde.edu/blog/hyde_school_blog/lo-fi-music-a-secret-to-focusing-during-study-sessions/
 
-Conclusion: 
+Conclusion:
+
 All in all, majority of the styles and elements were kept from the old mockup - however using feedback from peers and my tutor - alongside my own self-reflection and judgement, the addition of using modal tabs, validation elements and considerations to responsive design helped elevate and improve this final web application - in being more usable and visually clear for desktop and mobile versions. 
 
 
